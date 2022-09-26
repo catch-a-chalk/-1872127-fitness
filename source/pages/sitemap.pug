@@ -1,0 +1,24 @@
+extends common/_base
+
+block head
+    meta(name='description' content='Описание проекта')
+
+block content
+    .wrapper
+      header
+        .container
+      main
+        section.intro
+          .container
+            h1 Разводящая страница
+            p
+              | На многостраничных сайтах используйте эту страницу для создания списков всех страниц и ссылок на них.
+            p Это делается для удобства тестирования и для быстрого доступа к нужной странице.
+            h2 Пример
+            ol
+              li
+                a(href='index.html') Главная — index.html
+              li
+                a(href='#') Название страницы (состояние страницы, если отдельное) — ссылка на страницу.
+      footer
+        .container

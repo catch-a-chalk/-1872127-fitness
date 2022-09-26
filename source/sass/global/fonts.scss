@@ -1,14 +1,3 @@
-// @font-face {
-//   font-style: normal;
-//   font-weight: 400;
-//   font-family: "Rouble";
-
-//   font-display: swap;
-//   src:
-//     url("../fonts/rouble.woff2") format("woff2"),
-//     url("../fonts/rouble.woff") format("woff");
-// }
-
 @font-face {
   font-style: normal;
   font-weight: 400;
@@ -19,3 +8,8 @@
     url("../fonts/.woff2") format("woff2"),
     url("../fonts/.woff") format("woff");
 }
+
+// @include font-face("Bebas Neue", "../fonts/bebasneueregular");
+// @include font-face("Bebas Neue", "../fonts/bebasneuebold", 700);
+// @include font-face("Roboto Condensed", "../fonts/Robotocondensed");
+// @include font-face("Roboto Condensed", "../fonts/Robotocondensedbold", 700);

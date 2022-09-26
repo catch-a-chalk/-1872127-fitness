@@ -5,6 +5,7 @@ import compileStyles from './gulp/compileStyles.mjs';
 import { copy, copyImages, copySvg } from './gulp/copyAssets.mjs';
 import js from './gulp/compileScripts.mjs';
 import { svgo, sprite, createWebp, optimizeImages } from './gulp/optimizeImages.mjs';
+import compilePug from './gulp/compilePug.js';
 
 const server = browserSync.create();
 const streamStyles = () => compileStyles().pipe(server.stream());
@@ -21,7 +22,7 @@ const syncServer = () => {
     ui: false,
   });
 
-  gulp.watch('source/**.html', gulp.series(copy, refresh));
+  gulp.watch('source/pages/**/*.pug', gulp.series(compilePug, refresh));
   gulp.watch('source/sass/**/*.{scss,sass}', streamStyles);
   gulp.watch('source/js/**/*.{js,json}', gulp.series(js, refresh));
   gulp.watch('source/data/**/*.{js,json}', gulp.series(copy, refresh));
@@ -39,7 +40,7 @@ const refresh = (done) => {
   done();
 };
 
-const build = gulp.series(clean, svgo, copy, compileStyles, sprite, js);
+const build = gulp.series(clean, svgo, compilePug, copy, compileStyles, sprite, js);
 const start = gulp.series(build, syncServer);
 
 export { optimizeImages as imagemin, createWebp as webp, build, start };

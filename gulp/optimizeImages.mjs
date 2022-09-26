@@ -22,7 +22,7 @@ const svgo = () =>
 
 const sprite = () =>
   gulp
-      .src('source/img/sprite/*.svg')
+      .src('source/icons/*.svg')
       .pipe(svgstore({inlineSvg: true}))
       .pipe(rename('sprite_auto.svg'))
       .pipe(gulp.dest('build/img'));
