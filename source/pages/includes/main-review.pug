@@ -1,0 +1,26 @@
+- const REVIEWS = [{ header: 'Анна Орлова', text: '«Хожу в SuperClub уже больше года. Нравится, что в клубе всегда чисто, тренажеры обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей»'},]
+
+section.main-review
+  .main-review__wrapper
+    h1.section-heading Отзывы
+    .main-review__container
+      .main-review__slide
+        -
+          const reviewPath = 'img/review'
+        // 1х: 80px; 2x: 160px
+        picture
+          source(type='image/webp' media='(max-width: 767px)' srcset=`${reviewPath}-mobile@1x.webp, ${reviewPath}-mobile@2x.webp 2x`)
+          source(type='image/png' media='(max-width: 767px)' srcset=`${reviewPath}-mobile@1x.png, ${reviewPath}-mobile@2x.png 2x`)
+          source(type='image/webp' media='(max-width: 1199px)' srcset=`${reviewPath}-notmobile@1x.webp, ${reviewPath}-notmobile@2x.webp 2x`)
+          source(type='image/png' media='(max-width: 1199px)' srcset=`${reviewPath}-notmobile@1x.png, ${reviewPath}-notmobile@2x.png 2x`)
+          source(type='image/webp' srcset=`${reviewPath}-notmobile@1x.webp, ${reviewPath}-notmobile@2x.webp 2x`)
+          img(src=`${reviewPath}-notmobile@1x.png` srcset=`${reviewPath}-notmobile@2x.png 2x` alt='Иконка пользователя' width=80 height=80)
+        ul.main-review__list
+          each review in REVIEWS
+            li.main-review__item
+              h2=review.header
+              p=review.text
+    .main-review__arrows
+      // можно добавить класс is-active
+      button(type="button" aria-expanded="false").button-left
+      button(type="button" aria-expanded="false").button-right

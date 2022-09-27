@@ -1,0 +1,29 @@
+- const OPTIONS = [{ header: 'Месяц бесплатно', text: 'Приведи друга, получи абонемент в подарок', href: '#'},{ header: 'Скидка 20%', text: 'Корпоративный фитнес  с командой', href: '#'},]
+
+section.main-promo
+  .main-promo__wrapper
+    h1.section-heading Акции
+    .main-promo__suggestions
+      .main-promo__container
+        .main-promo__hot
+          h2 4999
+          h3 Год
+          p Безлимитный абонемент в&nbsp;тренажерный зал
+          a.main-promo__link(href='#') Подробнее
+        -
+          const promoPath = 'img/promo'
+        // 1х: 280px; 2x: 560px
+        picture
+          source(type='image/webp' media='(max-width: 767px)' srcset=`${promoPath}-mobile@1x.webp, ${promoPath}-mobile@2x.webp 2x`)
+          source(type='image/jpg' media='(max-width: 767px)' srcset=`${promoPath}-mobile@1x.jpg, ${promoPath}-mobile@2x.jpg 2x`)
+          source(type='image/webp' media='(max-width: 1199px)' srcset=`${promoPath}-tablet@1x.webp, ${promoPath}-tablet@2x.webp 2x`)
+          source(type='image/jpg' media='(max-width: 1199px)' srcset=`${promoPath}-tablet@1x.jpg, ${promoPath}-tablet@2x.jpg 2x`)
+          source(type='image/webp' srcset=`${promoPath}-desktop@1x.webp, ${promoPath}-desktop@2x.webp 2x`)
+          img(src=`${promoPath}-desktop@1x.jpg` srcset=`${promoPath}-desktop@2x.jpg 2x` alt='Довольная девушка, купившая абонемент' width=280 height=462)
+      ul.main-promo__option
+        each option in OPTIONS
+          li.main-promo__item
+            h2=option.header
+            p=option.text
+            a(href=option.href)
+              span Подробнее

@@ -1,0 +1,17 @@
+section.main-intro
+  .main-intro__wrapper
+    h1.section-heading Тренажерный зал
+    .main-intro__description
+      h2 Просторный зал площадью 900 кв/м
+      p Supergym&nbsp;&mdash; самый большой фитнес центр за&nbsp;Уралом и&nbsp;идеальное место для укрепления тела и&nbsp;здоровья. Тренажерный зал оснащен всем необходимым современным оборудованием для всех спортсменов. В&nbsp;зале расположены отдельная зона для Crossfit и&nbsp;кардио-зона с&nbsp;40&nbsp;тренажерами. Также в&nbsp;фитнес центре есть несколько оборудованных залов для различных видов групповых занятий.
+    -
+      const introPath = 'img/gym'
+    // 1х: 660px; 2x: 1320px
+    picture
+      source(type='image/webp' media='(max-width: 767px)' srcset=`${introPath}-mobile@1x.webp, ${introPath}-mobile@2x.webp 2x`)
+      source(type='image/jpg' media='(max-width: 767px)' srcset=`${introPath}-mobile@1x.jpg, ${introPath}-mobile@2x.jpg 2x`)
+      source(type='image/webp' media='(max-width: 1199px)' srcset=`${introPath}-tablet@1x.webp, ${introPath}-tablet@2x.webp 2x`)
+      source(type='image/jpg' media='(max-width: 1199px)' srcset=`${introPath}-tablet@1x.jpg, ${introPath}-tablet@2x.jpg 2x`)
+      source(type='image/webp' srcset=`${introPath}-desktop@1x.webp, ${introPath}-desktop@2x.webp 2x`)
+      img(src=`${introPath}-desktop@1x.jpg` srcset=`${introPath}-desktop@2x.jpg 2x` alt='Обзор тренажерного зала' width=660 height=401)
+    iframe(src='https://www.youtube.com/embed/9TZXsZItgdw' title='YouTube video player' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen='' width='364' height='228')

@@ -1,0 +1,24 @@
+- const CONDITIONS = [{ header: 'Дата', value: '7', text: 'Марта 2019' },{ header: 'Время', value: '12:00', text: '' },]
+
+section.main-competition
+  .main-competition__wrapper
+    h1 SUPER<br>GAMES
+    .main-competition__request
+      ul.main-competition__list
+        each condition in CONDITIONS
+          li.main-competition__item
+            h2=condition.header
+            p=condition.value
+            span=condition.text
+      p Ежегодные соревнования по CrossFit
+      a.btn-white(role='button' href='#') Заполнить заявку
+    -
+      const athletePath = 'img/athlete'
+    // 1х: 660px; 2x: 1320px
+    picture
+      source(type='image/webp' media='(max-width: 767px)' srcset=`${athletePath}-mobile@1x.webp, ${athletePath}-mobile@2x.webp 2x`)
+      source(type='image/jpg' media='(max-width: 767px)' srcset=`${athletePath}-mobile@1x.jpg, ${athletePath}-mobile@2x.jpg 2x`)
+      source(type='image/webp' media='(max-width: 1199px)' srcset=`${athletePath}-tablet@1x.webp, ${athletePath}-tablet@2x.webp 2x`)
+      source(type='image/jpg' media='(max-width: 1199px)' srcset=`${athletePath}-tablet@1x.jpg, ${athletePath}-tablet@2x.jpg 2x`)
+      source(type='image/webp' srcset=`${athletePath}-desktop@1x.webp, ${athletePath}-desktop@2x.webp 2x`)
+      img(src=`${athletePath}-desktop@1x.jpg` srcset=`${athletePath}-desktop@2x.jpg 2x` alt='Обзор тренажерного зала' width=660 height=500)

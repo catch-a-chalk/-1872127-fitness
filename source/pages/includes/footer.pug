@@ -1,0 +1,17 @@
+- const ITEMS = [{ href: '#', text: 'Услуги'}, { href: '#', text: 'Абонементы'}, { href: '#', text: 'Акции'}, { href: '#', text: 'Тренеры'}, { href: '#', text: 'Расписание'}]
+- const NETWORKS = [{ href: '#', icon: 'vk' },{ href: '#', icon: 'ok' },{ href: '#', icon: 'reddit' },]
+
+footer.footer
+  .footer_wrapper
+    h1 Supergym
+    ul.footer__list
+      each item in ITEMS
+        li.footer__item
+          a(href=item.href)
+            span=item.text
+    ul.footer__socials
+      each network in NETWORKS
+        li.footer__social
+          a(href=network.href)
+            svg(width='25' height='25' aria-hidden='true' fill='#FFFFFF')
+                use(href=`img/sprite_auto.svg#logo-${network.icon}`)

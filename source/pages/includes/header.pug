@@ -1,0 +1,36 @@
+- const CONTACTS = [{ href: '#', text: 'Supergym' },{ href: 'tel:+78005555555', text: '8-800-555-55-55' },]
+- const LINKS = [{ href: '#', text: 'Тренажёрный зал' },{ href: '#', text: 'Групповые занятия' },{ href: '#', text: 'Кардио-зона ' },]
+- const SOCIALS = [{ href: '#', icon: 'fb', width: '13' },{ href: '#', icon: 'vk', width: '14' },{ href: '#', icon: 'ig', width: '11' },]
+
+header.header
+  .header__wrapper
+    ul.header__contacts
+      each contact in CONTACTS
+        li.header__contact
+          a(href=contact.href)
+            span=contact.text
+    .header__intro
+      p Омск
+      h1 Фитнес<br>Центр
+      ul.header__links
+        each link in LINKS
+          li.header__link
+            a(href=link.href)
+              span=link.text
+      button.btn-white(type="button" aria-expanded="false") Купить абонемент
+      -
+        const headerPath = 'img/superman'
+      // 1х: 500px; 2x: 1000px
+      picture
+        source(type='image/webp' media='(max-width: 767px)' srcset=`${headerPath}-mobile@1x.webp, ${headerPath}-mobile@2x.webp 2x`)
+        source(type='image/jpg' media='(max-width: 767px)' srcset=`${headerPath}-mobile@1x.jpg, ${headerPath}-mobile@2x.jpg 2x`)
+        source(type='image/webp' media='(max-width: 1199px)' srcset=`${headerPath}-tablet@1x.webp, ${headerPath}-tablet@2x.webp 2x`)
+        source(type='image/jpg' media='(max-width: 1199px)' srcset=`${headerPath}-tablet@1x.jpg, ${headerPath}-tablet@2x.jpg 2x`)
+        source(type='image/webp' srcset=`${headerPath}-desktop@1x.webp, ${headerPath}-desktop@2x.webp 2x`)
+        img(src=`${headerPath}-desktop@1x.jpg` srcset=`${headerPath}-desktop@2x.jpg 2x` alt='Культурист в футболке супермена' width=500 height=556)
+      ul.header__socials
+        each social in SOCIALS
+          li.header__social
+            a(href=social.href)
+              svg(width=social.width height='9' aria-hidden='true' fill='#FFFFFF')
+                use(href=`img/sprite_auto.svg#logo-w-${social.icon}`)

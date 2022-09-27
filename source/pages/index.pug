@@ -2,5 +2,16 @@ extends common/_base
 
 block head
 block content
-    .wrapper
-        h1 Hello world!!
+  .wrapper
+      include ./includes/header
+      main
+        include ./includes/main-intro
+        include ./includes/main-subscription
+        include ./includes/main-competition
+        include ./includes/main-coaches
+        include ./includes/main-advantages
+        include ./includes/main-promo
+        include ./includes/main-review
+        include ./includes/main-feedback
+      include ./includes/footer
+  script(src='js/main.min.js')
