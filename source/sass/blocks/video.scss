@@ -1,0 +1,54 @@
+.video {
+  position: absolute;
+  top: 54%;
+  right: 34%;
+  // width: 100%;
+  // height: 0;
+  width: 364px;
+  height: 228px;
+  // padding-bottom: 56.25%;
+  background-color: $color-default-black;
+
+  &:hover .video__button,
+  &:focus .video__button {
+    opacity: 0.8;
+  }
+}
+
+.video__media {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.video__button {
+  position: absolute;
+  display: none;
+  top: 50%;
+  left: 50%;
+  width: 100px;
+  height: 100px;
+  border: none;
+  padding: 0;
+  transform: translate(-50%, -50%);
+  outline: none;
+
+  background: url(../../img/svg/icon-play.svg);
+  cursor: pointer;
+
+  &:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+}
+
+.video--enabled {
+  cursor: pointer;
+}
+
+.video--enabled .video__button {
+  display: block;
+}

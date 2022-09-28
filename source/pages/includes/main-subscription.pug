@@ -1,25 +1,32 @@
-- const MONTHS = [{ href: '#', text: '1 месяц' },{ href: '#', text: '6 месяцев' },{ href: '#', text: '12 месяцев' },]
-- const TABS = [{ index: '0', header: 'С тренером', condition: '12 занятий', price: '5000'},{ index: '1', header: 'Дневной', condition: 'с 8:00 до 17:00 ', price: '1700'},{ index: '2', header: 'Полный день', condition: 'с 8:00 до 22:00 ', price: '2700'},]
+- const MONTHS = [{ text: '1 месяц' },{ text: '6 месяцев' },{ text: '12 месяцев' },]
+- const TABS = [{ header: 'С тренером', condition: '12 занятий', price: '5000' },{ header: 'Дневной', condition: 'с 8:00 до 17:00 ', price: '1700' },{ header: 'Полный день', condition: 'с 8:00 до 22:00 ', price: '2700' },]
 
 // 1х: 321px; 2x: 642px
-section.main-subscription(style='background-image: var(--bg, url(img/plates-desktop@1x.png));\
-        --double-bg: url(img/plates-desktop@2x.png);\
-        --tab-bg: url(img/plates-tablet@1x.png);\
-        --double-tab-bg: url(img/plates-desktop@2x.png);')
-        .main-subscription__wrapper
-          h1.section-heading Абонементы
-          .main-subscription__container
-            ul.main-subscription__months
-              each month in MONTHS
-                li.main-subscription__month
-                  a(href=month.href)
-                    span=month.text
-            .main-subscription__tabs
-              each tab in TABS
-                .main-subscription__tab(data-index=tab.index)
-                  h2=tab.header
-                  h3=tab.condition
-                  p=tab.price
-                    span
-                    | i
-                  button.btn-blue(type="button" aria-expanded="false") Купить абонемент
+section.main-subscription
+  .main-subscription__wrapper
+    h1.section-heading Абонементы
+    .main-subscription__container
+      ul.main-subscription__months
+        each month, id in MONTHS
+          li.main-subscription__month
+            -
+              const currentId = id + 1
+            a(href=currentId)
+              span=month.text
+      .main-subscription__tabs
+        each tab in TABS
+          .main-subscription__tab(#id=currentId)
+            h2=tab.header
+            h3=tab.condition
+            p=tab.price
+              span
+              | r
+            button.btn.btn-blue(type="button" aria-expanded="false") Купить абонемент
+  -
+    const platesPath = 'img/plates'
+  // 1х: 321px; 2x: 642px
+  picture
+    source(type='image/webp' media='(max-width: 1199px)' srcset=`${platesPath}-tablet@1x.webp, ${platesPath}-tablet@2x.webp 2x`)
+    source(type='image/png' media='(max-width: 1199px)' srcset=`${platesPath}-tablet@1x.png, ${platesPath}-tablet@2x.png 2x`)
+    source(type='image/webp' srcset=`${platesPath}-desktop@1x.webp, ${platesPath}-desktop@2x.webp 2x`)
+    img.main-subscription__bg(src=`${platesPath}-desktop@1x.png` srcset=`${platesPath}-desktop@2x.png 2x` alt='Тренировочные блины' width=321 height=384)

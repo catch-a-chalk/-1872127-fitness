@@ -1,4 +1,4 @@
-- const CONTACTS = [{ href: '#', text: 'Supergym' },{ href: 'tel:+78005555555', text: '8-800-555-55-55' },]
+- const CONTACTS = [{ href: '', text: 'Supergym' },{ href: 'tel:+78005555555', text: '8-800-555-55-55' },]
 - const LINKS = [{ href: '#', text: 'Тренажёрный зал' },{ href: '#', text: 'Групповые занятия' },{ href: '#', text: 'Кардио-зона ' },]
 - const SOCIALS = [{ href: '#', icon: 'fb', width: '13' },{ href: '#', icon: 'vk', width: '14' },{ href: '#', icon: 'ig', width: '11' },]
 
@@ -10,14 +10,15 @@ header.header
           a(href=contact.href)
             span=contact.text
     .header__intro
-      p Омск
-      h1 Фитнес<br>Центр
-      ul.header__links
-        each link in LINKS
-          li.header__link
-            a(href=link.href)
-              span=link.text
-      button.btn-white(type="button" aria-expanded="false") Купить абонемент
+      .header__block
+        p Омск
+        h1 Фитнес<br>Центр
+        ul.header__links
+          each link in LINKS
+            li.header__link
+              a(href=link.href)
+                span=link.text
+        button.btn.btn-white(type="button" aria-expanded="false") Купить абонемент
       -
         const headerPath = 'img/superman'
       // 1х: 500px; 2x: 1000px

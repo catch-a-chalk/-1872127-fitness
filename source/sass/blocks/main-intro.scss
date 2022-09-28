@@ -1,0 +1,41 @@
+.main-intro {
+  color: $color-sapphire;
+}
+
+.main-intro__wrapper {
+  padding: 120px 103px 236px;
+
+  display: grid;
+  grid-template-columns: 355px auto;
+  column-gap: 85px;
+  justify-content: end;
+  position: relative;
+}
+
+.main-intro__description {
+  h1 {
+    margin-top: 50px;
+    margin-bottom: 5px;
+  }
+
+  h2 {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    letter-spacing: 0em;
+
+    margin-top: 5px;
+    margin-bottom: 40px;
+  }
+
+  p {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+    letter-spacing: -1px;
+    word-spacing: 4px;
+
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+}

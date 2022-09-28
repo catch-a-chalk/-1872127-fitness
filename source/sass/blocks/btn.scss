@@ -1,30 +1,39 @@
 .btn {
   display: inline-flex;
-  margin: 10px 0;
-  padding: 10px 20px;
+  justify-content: center;
+  align-items: center;
 
-  color: $color-default-white;
-
-  background-color: $color-neon-blue;
-  border: none;
   cursor: pointer;
+  background: transparent;
+  border: none;
 
-  transition: opacity $trans-default;
-
-  &--red {
-    background-color: $color-torch-red;
-  }
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 14px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
 
   &:disabled {
     opacity: 0.5;
-
     pointer-events: none;
   }
 
   @media (hover: hover), screen and (min-width: 0\0) {
     &:hover,
     &:focus {
-      opacity: 0.8;
+      background: linear-gradient(148.82deg, #D10A42 0.85%, #00359F 100%), linear-gradient(0deg, #FFFFFF, #FFFFFF);
     }
   }
+}
+
+.btn-white {
+  padding: 18px;
+  color: $color-default-white;
+  outline: 4px solid $color-default-white;
+}
+
+.btn-blue {
+  padding: 23px 27px;
+  color: $color-sapphire;
+  outline: 4px solid $color-sapphire;
 }

@@ -60,5 +60,7 @@
   "engines": {
     "node": ">=16.15.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "swiper": "^8.4.2"
+  }
 }
