@@ -1,0 +1,124 @@
+.main-promo__wrapper {
+  padding: 113px 103px 120px;
+
+  h1 {
+    margin: 0;
+    text-align: center;
+  }
+}
+
+.main-promo__suggestions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+
+  margin-top: 53px;
+}
+
+.main-promo__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.main-promo__hot {
+  color: $color-default-white;
+  background-color: $color-torch-red;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 45px;
+
+  a {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: $color-default-white;
+    border-bottom: 1px solid $color-default-white;
+
+    order: 4;
+    width: fit-content;
+  }
+}
+
+.main-promo__info {
+  display: flex;
+  flex-direction: column;
+
+  h2 {
+    font-size: 70px;
+    font-weight: 700;
+    line-height: 84px;
+    letter-spacing: 0em;
+
+    order: 2;
+    margin: 0;
+  }
+
+  h3 {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: 0em;
+
+    order: 1;
+    margin: 0;
+  }
+
+  p {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: 0em;
+
+    order: 3;
+    margin-top: 13px;
+  }
+}
+
+.main-promo__option {
+  display: grid;
+  row-gap: 40px;
+
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main-promo__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  border: 7px solid transparent;
+  border-image: linear-gradient(to right, #D10A42 0.85% , #00359F 100%);
+  -moz-border-image: -moz-linear-gradient(left, #D10A42 0.85% , #00359F 100%);
+  -webkit-border-image: -webkit-linear-gradient(left, #D10A42 0.85% , #00359F 100%);
+  border-image-slice: 1;
+  padding: 23px 28px 29px;
+
+  a {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 14px;
+    letter-spacing: 0.05em;
+    color: $color-resolution-blue;
+    text-transform: uppercase;
+    border-bottom: 1px solid $color-resolution-blue;
+
+    width: fit-content;
+  }
+}
+
+.main-promo__details {
+  h2 {
+    letter-spacing: 1px;
+    margin: 0;
+  }
+
+  p {
+    margin-top: 12px;
+  }
+}

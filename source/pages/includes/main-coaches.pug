@@ -1,17 +1,11 @@
 - const COACHES = [{ header: 'Анна Павлова', subheader: 'CrossFit', rank: 'Certified Level 3 Trainer', achievement: 'Победитель чемпионата России по CrossFit ', experience: 'Опыт — 6 лет'},{ header: 'Алексей Лавров', subheader: 'CrossFit', rank: 'Certified Level 3 Trainer', achievement: 'Победитель чемпионата России по CrossFit ', experience: 'Опыт — 6 лет'},{ header: 'Александр Пашков', subheader: 'CrossFit', rank: 'Certified Level 3 Trainer', achievement: 'Победитель чемпионата России по CrossFit ', experience: 'Опыт — 6 лет'},{ header: 'Мария Кетова', subheader: 'CrossFit', rank: 'Certified Level 3 Trainer', achievement: 'Победитель чемпионата России по CrossFit ', experience: 'Опыт — 6 лет'},]
 
 section.main-coaches
-  .main-coaches__wrapper
+  .main-coaches__wrapper.swiper
     h1.section-heading Тренеры
-    ul.main-coaches__list
+    ul.main-coaches__list.swiper-wrapper
       each coach, index in COACHES
-        li.main-coaches__item
-          h2=coach.header
-          p=coach.subheader
-          ul
-            li=coach.rank
-            li=coach.achievement
-            li=coach.experience
+        li.main-coaches__item.swiper-slide
           -
             const currentIndex = index + 1
             const coachPath = 'img/coach-' + currentIndex
@@ -23,7 +17,16 @@ section.main-coaches
             source(type='image/jpg' media='(max-width: 1199px)' srcset=`${coachPath}-tablet@1x.jpg, ${coachPath}-tablet@2x.jpg 2x`)
             source(type='image/webp' srcset=`${coachPath}-desktop@1x.webp, ${coachPath}-desktop@2x.webp 2x`)
             img(src=`${coachPath}-desktop@1x.jpg` srcset=`${coachPath}-desktop@2x.jpg 2x` alt=`Тренер ${coach.header}` width=260 height=294)
-    .main-coaches__arrows
-      // можно добавить класс is-active
-      button(type="button" aria-expanded="false").button-left
-      button(type="button" aria-expanded="false").button-right
+          h2=coach.header
+          .main-coaches__info
+            p=coach.subheader
+            ul
+              li=coach.rank
+              li=coach.achievement
+              li=coach.experience
+    button.button-left.swiper-button-prev(type="button" aria-expanded="false")
+      svg(width='16' height='32' aria-hidden='true' fill='none')
+        use(href='img/sprite_auto.svg#icon-left')
+    button.button-right.swiper-button-next(type="button" aria-expanded="false")
+      svg(width='16' height='32' aria-hidden='true' fill='none')
+        use(href='img/sprite_auto.svg#icon-right')

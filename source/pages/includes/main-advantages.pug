@@ -6,7 +6,8 @@ section.main-advantages
     ul.main-advantages__list
       each advantage in ADVANTAGES
         li.main-advantages__item
-          h2=advantage.value
-          small=advantage.small
+          .main-advantages__info
+            h2=advantage.value
+            small=advantage.small
           p=advantage.header
           span=advantage.text

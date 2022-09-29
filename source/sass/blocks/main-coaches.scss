@@ -1,0 +1,138 @@
+.main-coaches {
+  color: $color-ghost-white;
+}
+
+.main-coaches__wrapper {
+  padding: 60px 103px 120px;
+  position: relative;
+
+  h1 {
+    margin: -3px 0 0px 2px;
+  }
+
+  button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+
+    position: absolute;
+    top: 47%;
+  }
+}
+
+.main-coaches__list {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+
+  margin: 53px 0 0 0;
+  padding: 0;
+}
+
+.main-coaches__item {
+  aspect-ratio: 260 / 294;
+  max-height: 294px;
+  padding: 57px 45px 57px;
+
+  position: relative;
+  overflow: hidden;
+  transition-property: background-color;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+
+  &:hover,
+  &:focus-within {
+    background-color: rgba(16, 38, 84, 0.89);
+  }
+
+  &:hover h2,
+  &:focus-within h2 {
+    transform: none;
+    position: relative;
+    top: 5px;
+  }
+
+  &:hover .main-coaches__info,
+  &:focus-within .main-coaches__info {
+    opacity: 1;
+    transform: none;
+  }
+
+  h2 {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 5px;
+    letter-spacing: 0em;
+    margin: 0;
+
+    z-index: 1;
+    transform: translateY(198px);
+    transition-property: transform;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+  }
+}
+
+.main-coaches__info {
+  padding: 0;
+  margin: 0;
+
+  opacity: 0;
+  transition-property: transform, opacity;
+  transition-duration: 0.3s, 1s;
+  transition-timing-function: ease-in-out;
+  transform: translateY(386px);
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  align-content: space-between;
+  overflow-y: auto;
+
+  p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: center;
+
+    margin: 12px 0 0 0;
+  }
+
+  ul {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0em;
+
+    display: grid;
+    gap: 13px;
+    margin-top: 33px;
+    padding-left: 23px;
+    list-style-type: disc;
+  }
+}
+
+.button {
+  &-left {
+    right: 94%;
+    padding: 20px 20px 20px 47px;
+  }
+
+  &-right {
+    left: 94%;
+    padding: 20px 47px 20px 20px;
+  }
+}

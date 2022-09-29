@@ -6,9 +6,10 @@ section.main-promo
     .main-promo__suggestions
       .main-promo__container
         .main-promo__hot
-          h2 4999
-          h3 Год
-          p Безлимитный абонемент в&nbsp;тренажерный зал
+          .main-promo__info
+            h2 4999
+            h3 Год
+            p Безлимитный абонемент в&nbsp;тренажерный зал
           a.main-promo__link(href='#') Подробнее
         -
           const promoPath = 'img/promo'
@@ -23,7 +24,8 @@ section.main-promo
       ul.main-promo__option
         each option in OPTIONS
           li.main-promo__item
-            h2=option.header
-            p=option.text
+            .main-promo__details
+              h2=option.header
+              p=option.text
             a(href=option.href)
               span Подробнее
