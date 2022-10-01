@@ -1,5 +1,5 @@
 .main-promo__wrapper {
-  padding: 113px 103px 120px;
+  padding: 113px 103px 60px;
 
   h1 {
     margin: 0;
@@ -113,6 +113,8 @@
 }
 
 .main-promo__details {
+  color: $color-resolution-blue;
+
   h2 {
     letter-spacing: 1px;
     margin: 0;
