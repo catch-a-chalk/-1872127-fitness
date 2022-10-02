@@ -1,32 +1,42 @@
 .main-feedback__wrapper {
   width: 100%;
   margin-top: 60px;
-
   display: grid;
   grid-template-columns: 1fr 1fr;
+
+  @media (max-width: ($vp-1200 - 1)) {
+    margin-top: 42px;
+    grid-template-columns: 1fr;
+  }
 
   h2 {
     font-family: $ff-bebasneue;
     font-size: 49px;
     line-height: 64px;
     letter-spacing: 0.03em;
-
     margin: -8px 0 0 0;
+
+    @media (max-width: ($vp-1200 - 1)) {
+      font-size: 42px;
+      line-height: 42px;
+    }
   }
 }
 
 .main-feedback__form {
   background-color: $color-sapphire;
   color: $color-default-white;
-
   padding: 70px 170px 50px 103px;
+
+  @media (max-width: ($vp-1200 - 1)) {
+    padding: 75px 165px 70px 135px;
+  }
 
   input {
     font-size: 14px;
     font-weight: 400;
     line-height: 16px;
-    letter-spacing: 0em;
-
+    letter-spacing: 0;
     background: transparent;
     border: none;
     color: $color-default-white;
@@ -37,6 +47,10 @@
     grid-template-columns: 1fr 1fr;
     column-gap: 27px;
     row-gap: 30px;
+
+    @media (max-width: ($vp-1200 - 1)) {
+      column-gap: 58px;
+    }
   }
 
   p {
@@ -52,7 +66,6 @@
     letter-spacing: 0.05em;
     background: transparent;
     border: none;
-
     grid-column: 1 / 3;
     margin-top: 5px;
   }
@@ -61,12 +74,16 @@
 .main-feedback__data {
   background-color: $color-default-white;
   color: $color-sapphire;
-
   padding: 70px 120px 50px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   row-gap: 33px;
   column-gap: 65px;
+
+  @media (max-width: ($vp-1200 - 1)) {
+    padding: 76px 134px 50px 130px;
+    column-gap: 40px;
+  }
 
   h2 {
     grid-column: 1 / 3;
@@ -78,7 +95,6 @@
   list-style-type: none;
   margin: 0;
   padding: 0;
-
   display: grid;
   row-gap: 3px;
 
@@ -86,7 +102,12 @@
     font-size: 16px;
     font-weight: 700;
     line-height: 24px;
-    letter-spacing: 0em;
+    letter-spacing: 0;
+
+    @media (max-width: ($vp-1200 - 1)) {
+      font-size: 20px;
+      line-height: 30px;
+    }
   }
 
   p,
@@ -94,8 +115,13 @@
     font-size: 14px;
     font-weight: 400;
     line-height: 21px;
-    letter-spacing: 0em;
+    letter-spacing: 0;
     color: $color-sapphire;
+
+    @media (max-width: ($vp-1200 - 1)) {
+      font-size: 18px;
+      line-height: 27px;
+    }
   }
 }
 
@@ -109,7 +135,8 @@
     margin: 0;
   }
 
-  p {
+  p,
+  a {
     margin-top: 4px;
   }
 }

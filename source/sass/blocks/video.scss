@@ -2,12 +2,22 @@
   position: absolute;
   top: 54%;
   right: 34%;
-  // width: 100%;
-  // height: 0;
   width: 364px;
   height: 228px;
-  // padding-bottom: 56.25%;
   background-color: $color-default-black;
+
+  @media (max-width: ($vp-1200 - 1)) {
+    top: 69%;
+    right: 33%;
+    width: 266px;
+    height: 167px;
+  }
+
+  @media (max-width: ($vp-768 - 1)) {
+    position: sticky;
+    width: 100%;
+    min-height: 167px;
+  }
 
   &:hover .video__button,
   &:focus .video__button {
@@ -36,7 +46,7 @@
   transform: translate(-50%, -50%);
   outline: none;
 
-  background: url(../../img/svg/icon-play.svg);
+  background: url("../../img/svg/icon-play.svg");
   cursor: pointer;
 
   &:disabled {

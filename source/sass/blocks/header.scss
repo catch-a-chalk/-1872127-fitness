@@ -1,10 +1,18 @@
 .header {
   color: $color-default-white;
-  background: conic-gradient(from 130.31deg at 16.03% 39.06%, #B80027 -46.69deg, #003D85 32.24deg, #B80027 313.31deg, #003D85 392.24deg);
+  background: conic-gradient(from 130.31deg at 16.03% 39.06%, #b80027 -46.69deg, #003d85 32.24deg, #b80027 313.31deg, #003d85 392.24deg);
 }
 
 .header__wrapper {
   padding: 30px 103px 46px;
+
+  @media (max-width: ($vp-1200 - 1)) {
+    padding: 40px 45px 77px 45px;
+  }
+
+  @media (max-width: ($vp-768 - 1)) {
+    padding: 20px 15px 82px;
+  }
 }
 
 .header__contacts {
@@ -14,11 +22,22 @@
   font-weight: 700;
   line-height: 26px;
   letter-spacing: 0.02em;
-
   display: flex;
   justify-content: space-between;
   margin: 0;
   padding: 0;
+
+  @media (max-width: ($vp-1200 - 1)) {
+    font-size: 24px;
+    line-height: 24px;
+    margin-bottom: 23px;
+  }
+
+  @media (max-width: ($vp-768 - 1)) {
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0;
+  }
 }
 
 .header__contact {
@@ -36,31 +55,49 @@
   grid-template-columns: 397px 508px 128px;
   justify-content: space-between;
 
+  @media (max-width: ($vp-1200 - 1)) {
+    grid-template-columns: 1fr 324px;
+    column-gap: 30px;
+  }
+
+  @media (max-width: ($vp-768 - 1)) {
+    grid-template-columns: 1fr;
+  }
+
   button {
     grid-column: -1 / 1;
     grid-row: 3 / 4;
-  
     justify-self: end;
   }
 
   img {
     grid-column: 2 / 3;
     grid-row: 1 / -1;
-
     position: relative;
     bottom: 5px;
+
+    @media (max-width: ($vp-768 - 1)) {
+      display: none;
+    }
   }
 }
 
 .header__block {
   grid-column: 1 / 2;
   grid-row: 1 / 2;
-
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 125px 275px 60px;
   justify-content: end;
   align-content: center;
+
+  @media (max-width: ($vp-1200 - 1)) {
+    grid-template-rows: 55px 216px 52px;
+  }
+
+  @media (max-width: ($vp-768 - 1)) {
+    grid-template-rows: 85px 205px 56px;
+  }
 
   p {
     font-family: $ff-bebasneue;
@@ -70,10 +107,20 @@
     letter-spacing: 0.03em;
     text-align: end;
     align-self: end;
-
     grid-column: -1 / -2;
     grid-row: 1 / 2;
     margin: 0 0 10px 0;
+
+    @media (max-width: ($vp-1200 - 1)) {
+      font-size: 34px;
+      line-height: 41px;
+      margin: 0;
+    }
+
+    @media (max-width: ($vp-768 - 1)) {
+      font-size: 28px;
+      line-height: 34px;
+    }
   }
 
   h1 {
@@ -82,10 +129,20 @@
     line-height: 109px;
     letter-spacing: 0.03em;
     text-align: end;
-
     grid-column: -1 / 1;
     grid-row: 2 / 3;
     margin: 0;
+
+    @media (max-width: ($vp-1200 - 1)) {
+      font-size: 92px;
+      line-height: 86px;
+      letter-spacing: 0;
+    }
+
+    @media (max-width: ($vp-768 - 1)) {
+      font-size: 84px;
+      line-height: 78px;
+    }
   }
 
   img {
@@ -95,6 +152,14 @@
 
   button {
     width: 230px;
+
+    @media (max-width: ($vp-1200 - 1)) {
+      width: 183px;
+    }
+
+    @media (max-width: ($vp-768 - 1)) {
+      width: 100%;
+    }
   }
 }
 
@@ -102,12 +167,15 @@
   grid-column: 3 / 4;
   display: grid;
   gap: 9px;
-
   list-style-type: none;
   padding: 0;
   margin: 0 0 43px 0;
   justify-self: end;
   align-self: end;
+
+  @media (max-width: ($vp-1200 - 1)) {
+    display: none;
+  }
 }
 
 .header__links {
@@ -116,15 +184,30 @@
   padding: 0;
   margin: 40px 0 0 0;
   text-align: end;
-
   grid-column: 1 / 2;
   grid-row: 2 / 3;
   justify-self: end;
   align-self: center;
+
+  @media (max-width: ($vp-1200 - 1)) {
+    margin: 32px 0 0;
+  }
+
+  @media (max-width: ($vp-768 - 1)) {
+    margin: 27px 0 0;
+  }
 }
 
 .header__link {
   a {
     color: $color-default-white;
+  }
+
+  @media (max-width: ($vp-1024 - 1)) {
+    font-size: 15px;
+  }
+
+  @media (max-width: ($vp-768 - 1)) {
+    font-size: 13px;
   }
 }
