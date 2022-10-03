@@ -16,9 +16,8 @@ section.main-review
             source(type='image/png' media='(max-width: 1199px)' srcset=`${reviewPath}-notmobile@1x.png, ${reviewPath}-notmobile@2x.png 2x`)
             source(type='image/webp' srcset=`${reviewPath}-notmobile@1x.webp, ${reviewPath}-notmobile@2x.webp 2x`)
             img(src=`${reviewPath}-notmobile@1x.png` srcset=`${reviewPath}-notmobile@2x.png 2x` alt='Иконка пользователя' width=80 height=80)
-          .main-review__info
-            h2=review.header
-            p=review.text
+          h2=review.header
+          p=review.text
     button.btn-left.swiper-button-prev(type="button" aria-expanded="false")
       svg(width='16' height='32' aria-hidden='true' fill='none')
         use(href='img/sprite_auto.svg#icon-left')

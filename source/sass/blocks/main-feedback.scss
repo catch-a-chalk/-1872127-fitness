@@ -20,6 +20,11 @@
       font-size: 42px;
       line-height: 42px;
     }
+
+    @media (max-width: ($vp-768 - 1)) {
+      font-size: 32px;
+      line-height: 32px;
+    }
   }
 }
 
@@ -32,6 +37,10 @@
     padding: 75px 165px 70px 135px;
   }
 
+  @media (max-width: ($vp-768 - 1)) {
+    padding: 77px 15px 65px;
+  }
+
   input {
     font-size: 14px;
     font-weight: 400;
@@ -40,6 +49,12 @@
     background: transparent;
     border: none;
     color: $color-default-white;
+  }
+
+  h2 {
+    @media (max-width: ($vp-768 - 1)) {
+      margin-bottom: 24px;
+    }
   }
 
   form {
@@ -51,12 +66,21 @@
     @media (max-width: ($vp-1200 - 1)) {
       column-gap: 58px;
     }
+
+    @media (max-width: ($vp-768 - 1)) {
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   p {
     padding: 10px 10px 3px 0;
     margin: 23px 0 -5px;
     border-bottom: 1px solid $color-default-white;
+
+    @media (max-width: ($vp-768 - 1)) {
+      margin: 0 0 -5px;
+    }
   }
 
   button {
@@ -68,6 +92,10 @@
     border: none;
     grid-column: 1 / 3;
     margin-top: 5px;
+
+    @media (max-width: ($vp-768 - 1)) {
+      margin: 10px 0 0 0;
+    }
   }
 }
 
@@ -83,6 +111,12 @@
   @media (max-width: ($vp-1200 - 1)) {
     padding: 76px 134px 50px 130px;
     column-gap: 40px;
+  }
+
+  @media (max-width: ($vp-768 - 1)) {
+    padding: 77px 15px 38px;
+    display: flex;
+    flex-direction: column;
   }
 
   h2 {
@@ -127,6 +161,13 @@
 
 .main-feedback__contacts {
   justify-content: center;
+
+  @media (max-width: ($vp-768 - 1)) {
+    justify-content: flex-start ;
+    position: relative;
+    bottom: 27px;
+    gap: 26px;
+  }
 }
 
 .main-feedback__item,
