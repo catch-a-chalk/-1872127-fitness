@@ -1,26 +1,26 @@
 - const MONTHS = [{ text: '1 месяц' },{ text: '6 месяцев' },{ text: '12 месяцев' },]
-- const TABS = [{ header: 'С тренером', condition: '12 занятий', price: '5000' },{ header: 'Дневной', condition: 'с 8:00 до 17:00 ', price: '1700' },{ header: 'Полный день', condition: 'с 8:00 до 22:00 ', price: '2700' },]
+- const TABS = [{ header: 'С тренером', condition: '12 занятий', price: '5000', id: '1' },{ header: 'Дневной', condition: 'с 8:00 до 17:00 ', price: '1700', id: '2' },{ header: 'Полный день', condition: 'с 8:00 до 22:00 ', price: '2700', id: '3' },]
 
 // 1х: 321px; 2x: 642px
 section.main-subscription
   .main-subscription__wrapper
     h1.section-heading Абонементы
     .main-subscription__container
-      ul.main-subscription__months
+      ul.main-subscription__months.tabs(data-tabgroup='first-tab-group')
         each month, id in MONTHS
           li.main-subscription__month
             -
               const currentId = id + 1
             a(href=currentId)
               span=month.text
-      .main-subscription__tabs
+      .main-subscription__tabs(id='first-tab-group')
         each tab in TABS
-          .main-subscription__tab(#id=currentId)
+          .main-subscription__tab(id=`${tab.id}`)
             h2=tab.header
             h3=tab.condition
-            p=tab.price
-              span
-              | r
+            p(id='price')=tab.price
+              svg(width='30' height='42' aria-hidden='true' fill="#102654")
+                use(href='img/sprite_auto.svg#icon-rouble')
             button.btn.btn-blue(type="button" aria-expanded="false") Купить абонемент
   -
     const platesPath = 'img/plates'

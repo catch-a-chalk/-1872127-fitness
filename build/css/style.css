@@ -830,7 +830,7 @@ button,
 
 .video__button {
   position: absolute;
-  display: none;
+  display: block;
   top: 50%;
   left: 50%;
   width: 100px;
@@ -848,14 +848,6 @@ button,
 .video__button:disabled {
   opacity: 0.5;
   pointer-events: none;
-}
-
-.video--enabled {
-  cursor: pointer;
-}
-
-.video--enabled .video__button {
-  display: block;
 }
 
 .header {

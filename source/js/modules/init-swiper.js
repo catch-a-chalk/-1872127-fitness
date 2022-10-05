@@ -1,3 +1,5 @@
+import Swiper from 'swiper';
+
 const initSwiper = new Swiper('.swiper', {
   // Optional parameters
   direction: 'vertical',

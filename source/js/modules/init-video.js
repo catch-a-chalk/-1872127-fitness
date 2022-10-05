@@ -1,51 +1,41 @@
-export function findVideos() {
-  let videos = document.querySelectorAll('.video');
+const videoWrapper = document.querySelector(".video");
 
-  for (let i = 0; i < videos.length; i++) {
-      setupVideo(videos[i]);
-  }
+videoWrapper && initVideo(videoWrapper);
+
+/* function initVideo(wrapper) {
+	const video = wrapper.querySelector(".video__media"),
+		button = wrapper.querySelector(".video__button");
+		wrapper.addEventListener("click", () => {
+		video.controls = true;
+		button.hidden = true;
+		video.play();
+	});
+}
+ */
+
+function initVideo(wrapper) {
+	const button = wrapper.querySelector(".video__button"),
+		youtubeID = wrapper.href.slice(17);
+
+	button.hidden = false;
+
+	wrapper.removeAttribute("href");
+
+	wrapper.addEventListener("click", () => {
+		const parent = wrapper.parentElement;
+		const iframe = document.createElement("iframe");
+		iframe.setAttribute("allowfullscreen", "");
+		iframe.setAttribute("allow", "autoplay");
+		iframe.setAttribute(
+			"src",
+			`https://www.youtube.com/embed/${youtubeID}?rel=0&showinfo=0&autoplay=1`
+		);
+		iframe.classList.value = wrapper.classList.value;
+		iframe.width = 364;
+		iframe.height = 228;
+
+		parent.replaceChild(iframe, wrapper);
+	});
 }
 
-function setupVideo(video) {
-  let link = video.querySelector('.video__link');
-  let media = video.querySelector('.video__media');
-  let button = video.querySelector('.video__button');
-  let id = parseMediaURL(media);
-
-  video.addEventListener('click', () => {
-      let iframe = createIframe(id);
-
-      link.remove();
-      button.remove();
-      video.appendChild(iframe);
-  });
-
-  link.removeAttribute('href');
-  video.classList.add('video--enabled');
-}
-
-// Как правильно указать путь к изображению? С учетом того, что несколько версий
-function parseMediaURL(media) {
-  let regexp = /https:\/\/i\.ytimg\.com\/vi\/([a-zA-Z0-9_-]+)\/maxresdefault\.jpg/i;
-  let url = media.src;
-  let match = url.match(regexp);
-
-  return match[1];
-}
-
-function createIframe(id) {
-  let iframe = document.createElement('iframe');
-
-  iframe.setAttribute('allowfullscreen', '');
-  iframe.setAttribute('allow', 'autoplay');
-  iframe.setAttribute('src', generateURL(id));
-  iframe.classList.add('video__media');
-
-  return iframe;
-}
-
-function generateURL(id) {
-  let query = '?rel=0&showinfo=0&autoplay=1';
-
-  return 'https://www.youtube.com/embed/' + id + query;
-}
+export {initVideo};
