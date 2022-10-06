@@ -27,11 +27,11 @@
 
     @media (max-width: ($vp-1200 - 1)) {
       top: 29%;
-  
+
       &:first-of-type {
         left: 0%;
       }
-  
+
       &:last-of-type {
         left: 90%;
       }
@@ -39,11 +39,11 @@
 
     @media (max-width: ($vp-768 - 1)) {
       top: 46%;
-  
+
       &:first-of-type {
         left: 0%;
       }
-  
+
       &:last-of-type {
         left: 84%;
       }

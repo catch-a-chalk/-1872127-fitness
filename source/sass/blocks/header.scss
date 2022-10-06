@@ -52,11 +52,11 @@
 
 .header__intro {
   display: grid;
-  grid-template-columns: 397px 508px 128px;
+  grid-template-columns: 397px auto auto;
   justify-content: space-between;
 
   @media (max-width: ($vp-1200 - 1)) {
-    grid-template-columns: 1fr 324px;
+    grid-template-columns: 1fr 1fr;
     column-gap: 30px;
   }
 
@@ -64,17 +64,26 @@
     grid-template-columns: 1fr;
   }
 
-  button {
+  a {
     grid-column: -1 / 1;
     grid-row: 3 / 4;
     justify-self: end;
   }
 
   img {
+    aspect-ratio: 500 / 556;
+    max-width: 500px;
+    max-height: 556px;
     grid-column: 2 / 3;
     grid-row: 1 / -1;
     position: relative;
     bottom: 5px;
+
+    @media (max-width: ($vp-1200 - 1)) {
+      aspect-ratio: 324 / 390;
+      max-width: 324px;
+      max-height: 390px;
+    }
 
     @media (max-width: ($vp-768 - 1)) {
       display: none;
@@ -145,12 +154,7 @@
     }
   }
 
-  img {
-    position: relative;
-    bottom: 5px;
-  }
-
-  button {
+  a {
     width: 230px;
 
     @media (max-width: ($vp-1200 - 1)) {

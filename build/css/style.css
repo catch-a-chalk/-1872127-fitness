@@ -575,6 +575,8 @@ button,
 
 .wrapper {
   position: relative;
+  max-width: 1920px;
+  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -643,7 +645,6 @@ button,
   width: 100%;
   max-width: 1920px;
   margin: 0 auto;
-  padding: 0 40px;
 }
 
 .btn {
@@ -887,14 +888,14 @@ button,
 .header__intro {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 397px 508px 128px;
-  grid-template-columns: 397px 508px 128px;
+  -ms-grid-columns: 397px auto auto;
+  grid-template-columns: 397px auto auto;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
-.header__intro button {
+.header__intro a {
   grid-column: -1/1;
   -ms-grid-row: 3;
   -ms-grid-row-span: 1;
@@ -904,6 +905,9 @@ button,
 }
 
 .header__intro img {
+  aspect-ratio: 500/556;
+  max-width: 500px;
+  max-height: 556px;
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-column: 2/3;
@@ -961,12 +965,7 @@ button,
   margin: 0;
 }
 
-.header__block img {
-  position: relative;
-  bottom: 5px;
-}
-
-.header__block button {
+.header__block a {
   width: 230px;
 }
 
@@ -2144,12 +2143,6 @@ button,
   }
 }
 
-@media (max-width: 1439px) {
-  .container {
-    padding: 0 32px;
-  }
-}
-
 @media (max-width: 1199px) {
   .section-heading {
     font-size: 42px;
@@ -2179,11 +2172,17 @@ button,
   }
 
   .header__intro {
-    -ms-grid-columns: 1fr 324px;
-    grid-template-columns: 1fr 324px;
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     -webkit-column-gap: 30px;
     -moz-column-gap: 30px;
     column-gap: 30px;
+  }
+
+  .header__intro img {
+    aspect-ratio: 324/390;
+    max-width: 324px;
+    max-height: 390px;
   }
 
   .header__block {
@@ -2203,7 +2202,7 @@ button,
     letter-spacing: 0;
   }
 
-  .header__block button {
+  .header__block a {
     width: 183px;
   }
 
@@ -2514,10 +2513,6 @@ button,
 }
 
 @media (max-width: 1023px) {
-  .container {
-    padding: 0 24px;
-  }
-
   .header__link {
     font-size: 15px;
   }
@@ -2527,10 +2522,6 @@ button,
   .section-heading {
     font-size: 32px;
     line-height: 32px;
-  }
-
-  .container {
-    padding: 0 16px;
   }
 
   .btn-left {
@@ -2594,7 +2585,7 @@ button,
     line-height: 78px;
   }
 
-  .header__block button {
+  .header__block a {
     width: 100%;
   }
 
