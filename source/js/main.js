@@ -1,7 +1,7 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {initVideo} from './modules/init-video';
-import {initTab} from './modules/init-tab';
+import {initPlanTabs} from './modules/init-plantabs';
 
 // ---------------------------------
 
@@ -16,7 +16,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // ---------------------------------
 
   initVideo();
-  initTab();
+  initPlanTabs();
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана

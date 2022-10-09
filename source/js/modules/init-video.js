@@ -1,21 +1,8 @@
-const videoWrapper = document.querySelector(".video");
-
-videoWrapper && initVideo(videoWrapper);
-
-/* function initVideo(wrapper) {
-	const video = wrapper.querySelector(".video__media"),
-		button = wrapper.querySelector(".video__button");
-		wrapper.addEventListener("click", () => {
-		video.controls = true;
-		button.hidden = true;
-		video.play();
-	});
-}
- */
-
-function initVideo(wrapper) {
-	const button = wrapper.querySelector(".video__button"),
-		youtubeID = wrapper.href.slice(17);
+export function initVideo() {
+	const wrapper = document.querySelector(".video");
+	const button = wrapper.querySelector(".video__button");
+	const video = wrapper.querySelector(".video__link");
+	const youtubeID = video.href.slice(17);
 
 	button.hidden = false;
 
@@ -37,5 +24,3 @@ function initVideo(wrapper) {
 		parent.replaceChild(iframe, wrapper);
 	});
 }
-
-export {initVideo};
