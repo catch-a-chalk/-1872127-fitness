@@ -14,8 +14,8 @@ videoWrapper && initVideo(videoWrapper);
  */
 
 function initVideo(wrapper) {
-	const button = wrapper.querySelector(".video__button"),
-		youtubeID = wrapper.href.slice(17);
+	/* const button = wrapper.querySelector(".video__button"),
+		youtubeID = ""; // wrapper.href.slice(17);
 
 	button.hidden = false;
 
@@ -35,7 +35,7 @@ function initVideo(wrapper) {
 		iframe.height = 228;
 
 		parent.replaceChild(iframe, wrapper);
-	});
+	}); */
 }
 
 export {initVideo};
