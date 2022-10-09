@@ -3,14 +3,14 @@
   grid-template-columns: 1160px;
   justify-content: center;
   justify-items: center;
-  padding-block: 120px calc(120px + var(--next-block-size, 0));
+  padding-block: 116px calc(120px + var(--next-block-size, 0)) 120px;
   --background: var(--bg);
 
   background: {
-    color: $color-ghost-white;
+    color: #f8f9fc;
     image: var(--background),
-      linear-gradient(to top, var(--next-block-color) var(--next-block-size, 0), $color-ghost-white var(--next-block-size, 0));
-    size: 381px auto 100%;
+      linear-gradient(to top, var(--next-block-color) var(--next-block-size, 0), #f8f9fc var(--next-block-size, 0));
+    size: 490px auto, 100%;
     repeat: no-repeat;
     position: right -130px bottom, center bottom;
   }
@@ -18,11 +18,24 @@
   @media (min-resolution: 2dppx) {
     --background: var(--bg2);
   }
+
+  @media (max-width: ($vp-768 - 1)) {
+    background-image: none;
+  }
 }
 
 .plans__title {
   line-height: 1;
-  margin-block: 0 (53px - 20px);
+  margin-block: 116px (53px - 31px);
+
+  
+  @media (max-width: ($vp-1200 - 1)) {
+    margin-block: 99px (53px - 38px);
+  }
+
+  @media (max-width: ($vp-768 - 1)) {
+    margin-block: 69px (53px - 38px);
+  }
 }
 
 .plans__nav {
@@ -52,6 +65,13 @@
     &:focus-visible {
       color: hsl(221deg 68% 20%);
     }
+
+    @media (max-width: ($vp-768 - 1)) {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      letter-spacing: 0;
+    }
   }
 }
 
@@ -62,8 +82,20 @@
   grid-template-columns: repeat(3, 1fr);
   background-position: bottom right;
   margin-top: 38px;
+  margin-bottom: 119px;
 
-  &::hidden {
+  @media (max-width: ($vp-1200 - 1)) {
+    grid-template-columns: 1fr;
+    width: 38%;
+    margin-bottom: 173px;
+  }
+
+  @media (max-width: ($vp-768 - 1)) {
+    width: 25%;
+    margin-bottom: 58px;
+  }
+
+  &[hidden] {
     display: none;
   }
 }

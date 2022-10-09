@@ -1,9 +1,9 @@
 .plan-card {
   background: {
     color: $color-default-white;
-    image: linear-gradient(to right, $color-crimson 0.85%, $color-smalt 100%);
+    image: linear-gradient(to right, #d10a42 0.85%, #00359f 100%);
   }
-  padding-block: 62px 77px;
+  padding-block: 62px 68px;
   padding-inline: 20px;
   display: flex;
   flex-direction: column;
@@ -15,8 +15,12 @@
   font-size: 16px;
   font-weight: 400;
   line-height: 1.5;
-  color: $color-chambray;
+  color: #495a7d;
   overflow: hidden;
+
+  @media (max-width: ($vp-768 - 1)) {
+    padding-block: 46px 53px;
+  }
 
   &::before {
     content: "";
@@ -29,7 +33,7 @@
     background-color: $color-default-white;
 
     transition: scale 0.3s ease-in-out;
-    transform: center;
+    transform-origin: center;
   }
 
   &:hover,
@@ -44,8 +48,16 @@
   font-size: 26px;
   font-weight: 700;
   line-height: 1.1;
-  color: $color-sapphire;
+  color: #102654;
   margin-block: 0 9px;
+
+  @media (max-width: ($vp-768 - 1)) {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0;
+    text-align: center;
+  }
 }
 
 .plan-card__subtitle {
@@ -57,7 +69,7 @@
   line-height: 1.5;
   margin-block: 66px 35px;
   font-weight: 700;
-  color: $color-egyptian-blue;
+  color: #103aae;
   position: relative;
 
   display: flex;
@@ -65,15 +77,30 @@
   align-content: center;
   gap: 14px;
 
+  @media (max-width: ($vp-768 - 1)) {
+    font-size: 48px;
+    line-height: 72px;
+    margin-block: 55px 31px;
+    letter-spacing: 0;
+
+    svg {
+      width: 24px;
+    }
+  }
+
   &::before {
     position: absolute;
     content: attr(data-back);
     font-size: 1.67em;
-    color: rgba($color-whisper, 48%);
+    color: rgba(#e8e8e8, 48%);
     z-index: -1;
     left: 50%;
     translate: -50% 0;
-    top: -0.54em;
+    
+
+    @media (max-width: ($vp-768 - 1)) {
+      top: -0.24em;
+    }
   }
 }
 
@@ -85,15 +112,16 @@
   align-items: center;
   letter-spacing: 0.05em;
   text-transform: uppercase;
+  user-select: none;
 
   background: {
-    image: linear-gradient(92.56deg, $color-default-white 0, $color-torch-red 63.48%, $color-cobalt 100%);
+    image: linear-gradient(92.56deg, #ffffff 0, #ed0233 63.48%, #003eb7 100%);
     position: -100%;
     repeat: no-repeat;
     size: 250%;
   }
 
-  color: $color-sapphire;
+  color: #102654;
   padding: 24px 45px;
 
   border: 2px solid currentColor;
@@ -103,11 +131,17 @@
     duration: 0.3s;
     delay: 0, 0.2s 0.2s;
     timing-function: ease-in-out;
-  };
+  }
 
-  &:hover,
+  &:hover {
+    color: #ffffff;
+    border-color: transparent;
+    background-position: 98%;
+  }
+
   &:focus-visible {
-    color: $color-default-white;
+    color: #ffffff;
+
     border-color: transparent;
     background-position: 98%;
   }

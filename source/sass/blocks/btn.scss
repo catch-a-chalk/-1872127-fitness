@@ -2,6 +2,7 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
+  user-select: none;
 
   cursor: pointer;
   background: transparent;
@@ -48,10 +49,12 @@
   padding: 18px;
   color: $color-default-white;
   outline: 4px solid $color-default-white;
+  user-select: none;
 }
 
 .btn-blue {
   padding: 23px 27px;
   color: $color-sapphire;
   outline: 4px solid $color-sapphire;
+  user-select: none;
 }

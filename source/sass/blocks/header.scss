@@ -53,7 +53,7 @@
 .header__intro {
   display: grid;
   grid-template-columns: 397px auto auto;
-  justify-content: space-between;
+  justify-content: stretch;
 
   @media (max-width: ($vp-1200 - 1)) {
     grid-template-columns: 1fr 1fr;
@@ -78,11 +78,13 @@
     grid-row: 1 / -1;
     position: relative;
     bottom: 5px;
+    margin-left: 63px;
 
     @media (max-width: ($vp-1200 - 1)) {
       aspect-ratio: 324 / 390;
       max-width: 324px;
       max-height: 390px;
+      margin: 0;
     }
 
     @media (max-width: ($vp-768 - 1)) {

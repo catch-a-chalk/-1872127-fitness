@@ -49,6 +49,12 @@
   background: url("../../img/svg/icon-play.svg");
   cursor: pointer;
 
+  @media (max-width: ($vp-768 - 1)) {
+    top: 40%;
+    left: 45%;
+    scale: 0.68;
+  }
+
   &:disabled {
     opacity: 0.5;
     pointer-events: none;
