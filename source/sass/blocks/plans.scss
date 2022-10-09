@@ -63,7 +63,7 @@
   background-position: bottom right;
   margin-top: 38px;
 
-  &:hidden {
+  &::hidden {
     display: none;
   }
 }

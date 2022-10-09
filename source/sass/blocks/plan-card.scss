@@ -34,7 +34,7 @@
 
   &:hover,
   &:focus-within {
-    &:before {
+    &::before {
       scale: 0.95 0.96;
     }
   }
@@ -65,7 +65,7 @@
   align-content: center;
   gap: 14px;
 
-  &:before {
+  &::before {
     position: absolute;
     content: attr(data-back);
     font-size: 1.67em;

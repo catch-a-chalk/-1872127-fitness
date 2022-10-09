@@ -1934,7 +1934,7 @@ button,
 }
 
 .footer__wrapper {
-  margin: 41px 103px 44px;
+  padding: 41px 103px 44px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2067,7 +2067,7 @@ button,
   margin-top: 38px;
 }
 
-.plans__list:hidden {
+.plans__list::hidden {
   display: none;
 }
 
@@ -2115,8 +2115,8 @@ button,
   transform: center;
 }
 
-.plan-card:hover:before,
-.plan-card:focus-within:before {
+.plan-card:hover::before,
+.plan-card:focus-within::before {
   scale: 0.95 0.96;
 }
 
@@ -2150,7 +2150,7 @@ button,
   gap: 14px;
 }
 
-.plan-card__price:before {
+.plan-card__price::before {
   position: absolute;
   content: attr(data-back);
   font-size: 1.67em;
@@ -2537,7 +2537,7 @@ button,
   }
 
   .footer__wrapper {
-    margin: 45px 40px;
+    padding: 45px 40px;
   }
 
   .footer__wrapper h1 {
@@ -2908,7 +2908,7 @@ button,
   }
 
   .footer__wrapper {
-    margin: 50px 15px;
+    padding: 50px 15px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;

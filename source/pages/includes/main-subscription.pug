@@ -39,7 +39,7 @@ section.plans#plans(style=`--bg: url("../${platesPath}-desktop@1x.png");
         - const isSelected = index === 0
         a(href=`#${plan.id}` role="tab" id=`${plan.id}-tab`,
           aria-selected=String(isSelected), tabindex=isSelected ?
-          undefined : -1)=plan.text 
+          undefined : -1)=plan.text
   each plans, id in PLANS
     div._list(role="tabpanel", id=id, aria-labelledby=`${id}-tab`
     tabindex=-1, hidden=id !== PLAN_IDs[0])

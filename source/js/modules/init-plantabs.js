@@ -2,7 +2,7 @@ export function initPlanTabs() {
   const plansSection = document.querySelector(".plans");
 
   if (plansSection) {
-    const navigation = plansSection.querySelector(".plans__nav"), 
+    const navigation = plansSection.querySelector(".plans__nav"),
       tabs = navigation !== null && navigation.querySelectorAll("a"),
       panels = plansSection.querySelectorAll(".plans__list");
 
