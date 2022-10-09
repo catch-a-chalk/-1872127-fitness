@@ -1,0 +1,120 @@
+.plan-card {
+  background: {
+    color: $color-default-white;
+    image: linear-gradient(to right, #d10a42 0.85%, #00359f 100%);
+  }
+  padding-block: 62px 77px;
+  padding-inline: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  isolation: isolate;
+
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495a7d;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 101%;
+    height: 101%;
+    left: -0.5%;
+    top: -0.5%;
+    background-color: $color-default-white;
+
+    transition: scale 0.3s ease-in-out;
+    transform-origin: center;
+  }
+
+  &:hover,
+  &:focus-within {
+    &::before {
+      scale: 0.95 0.96;
+    }
+  }
+}
+
+.plan-card__title {
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.1;
+  color: #102654;
+  margin-block: 0 9px;
+}
+
+.plan-card__subtitle {
+  margin: 0;
+}
+
+.plan-card__price {
+  font-size: 60px;
+  line-height: 1.5;
+  margin-block: 66px 35px;
+  font-weight: 700;
+  color: #103aae;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  align-content: center;
+  gap: 14px;
+
+  &::before {
+    position: absolute;
+    content: attr(data-back);
+    font-size: 1.67em;
+    color: rgba(#e8e8e8, 48%);
+    z-index: -1;
+    left: 50%;
+    translate: -50% 0;
+    top: -0.54em;
+  }
+}
+
+.plan-card__cta {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+
+  background: {
+    image: linear-gradient(92.56deg, #ffffff 0, #ed0233 63.48%, #003eb7 100%);
+    position: -100%;
+    repeat: no-repeat;
+    size: 250%;
+  }
+
+  color: #102654;
+  padding: 24px 45px;
+
+  border: 2px solid currentColor;
+
+  transition: {
+    property: background-position, color, border-color;
+    duration: 0.3s;
+    delay: 0, 0.2s 0.2s;
+    timing-function: ease-in-out;
+  }
+
+  &:hover {
+    color: #ffffff;
+    border-color: transparent;
+    background-position: 98%;
+  }
+
+  &:focus-visible {
+    color: #ffffff;
+
+    border-color: transparent;
+    background-position: 98%;
+  }
+}
