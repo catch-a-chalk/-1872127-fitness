@@ -1,32 +1,52 @@
-- const MONTHS = [{ text: '1 месяц' },{ text: '6 месяцев' },{ text: '12 месяцев' },]
-- const TABS = [{ header: 'С тренером', condition: '12 занятий', price: '5000', id: '1' },{ header: 'Дневной', condition: 'с 8:00 до 17:00 ', price: '1700', id: '2' },{ header: 'Полный день', condition: 'с 8:00 до 22:00 ', price: '2700', id: '3' },]
+-
+  const PLAN_IDs = ['one-month', 'six-months', 'twelve-months'],
+  PLANS_NAV = [
+    { text: '1 месяц', id: PLAN_IDs[0]},
+    { text: '6 месяцев', id: PLAN_IDs[1]},
+    { text: '12 месяцев', id: PLAN_IDs[2] }
+  ],
+  PLANS = {
+    [PLAN_IDs[0]]: [
+      { title: 'С тренером', condition: '12 занятий', price: 5000, href: '/order-coach-one-month' },
+      { title: 'Дневной', condition: 'с 8:00 до 17:00', price: 1700, href: '/order-day-one-month' },
+      { title: 'Полный день', condition: 'с 8:00 до 22:00 ', price: 2700, href: '/order-full-one-month' }
+    ],
+    [PLAN_IDs[1]]: [
+      { title: 'С тренером', condition: '12 занятий', price: 5000*6*0.9, href: '/order-coach-six-months' },
+      { title: 'Дневной', condition: 'с 8:00 до 17:00', price: 1700*6*0.9, href: '/order-day-six-months'},
+      { title: 'Полный день', condition: 'с 8:00 до 22:00 ', price: 2700*0.9, href: '/order-full-six-months' }
+    ],
+    [PLAN_IDs[2]]: [
+      { title: 'С тренером', condition: '12 занятий', price: 5000*12*0.8, href: '/order-coach-twelve-months' },
+      { title: 'Дневной', condition: 'с 8:00 до 17:00', price: 1700*12*0.8, href: '/order-day-twelve-months'},
+      { title: 'Полный день', condition: 'с 8:00 до 22:00 ', price: 2700*12*0.8, href: '/order-full-twelve-months' }
+    ]
+  },
+  platesPath = 'img/plates'
 
-// 1х: 321px; 2x: 642px
-section.main-subscription#plans
-  .main-subscription__wrapper
-    h1.section-heading Абонементы
-    .main-subscription__container
-      ul.main-subscription__months.tabs(data-tabgroup='first-tab-group')
-        each month, id in MONTHS
-          li.main-subscription__month
-            -
-              const currentId = id + 1
-            a(href=currentId)
-              span=month.text
-      .main-subscription__tabs(id='first-tab-group')
-        each tab in TABS
-          .main-subscription__tab(id=`${tab.id}`)
-            h2=tab.header
-            h3=tab.condition
-            p(id='price')=tab.price
-              svg(width='30' height='42' aria-hidden='true' fill="#102654")
-                use(href='img/sprite_auto.svg#icon-rouble')
-            button.btn.btn-blue(type="button" aria-expanded="false") Купить абонемент
-  -
-    const platesPath = 'img/plates'
-  // 1х: 321px; 2x: 642px
-  picture
-    source(type='image/webp' media='(max-width: 1199px)' srcset=`${platesPath}-tablet@1x.webp, ${platesPath}-tablet@2x.webp 2x`)
-    source(type='image/png' media='(max-width: 1199px)' srcset=`${platesPath}-tablet@1x.png, ${platesPath}-tablet@2x.png 2x`)
-    source(type='image/webp' srcset=`${platesPath}-desktop@1x.webp, ${platesPath}-desktop@2x.webp 2x`)
-    img.main-subscription__bg(src=`${platesPath}-desktop@1x.png` srcset=`${platesPath}-desktop@2x.png 2x` alt='Тренировочные блины' width=321 height=384)
+// 1х: 381px; 2x: 762px
+section.plans#plans(style=`--bg: url("../${platesPath}-desktop@1x.png");
+--bg2: url("../${platesPath}-desktop@2x.png");
+--tab: url("../${platesPath}-tablet@1x.png");
+--tab2: url("../${platesPath}-tablet@2x.png");
+--next-block-size: 71px;
+--next-block-color: white;
+`)
+  h2.section-heading._title Абонементы
+  ul._nav(role='tablist')
+    each plan, index in PLANS_NAV
+      li(role="presentation")
+        - const isSelected = index === 0
+        a(href=`#${plan.id}` role="tab" id=`${plan.id}-tab`,
+          aria-selected=String(isSelected), tabindex=isSelected ? undefined : -1)=plan.text
+  each plans, id in PLANS
+    div._list(role="tabpanel", id=id, aria-labelledby=`${id}-tab`
+    tabindex=-1, hidden=id !== PLAN_IDs[0])
+      each plan in plans
+        article.plan-card
+          h3._title=plan.title
+          p._subtitle=plan.condition
+          p._price(data-back=plan.price)=plan.price
+            svg(width=30 height=42 aria-label='рублей' title='рублей' role fill="#102654")
+              use(href='img/sprite_auto.svg#icon-rouble')
+          a(href=plan.href)._cta Купить абонемент
