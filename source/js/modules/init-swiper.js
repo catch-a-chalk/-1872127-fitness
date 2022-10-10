@@ -1,8 +1,9 @@
-import Swiper from 'swiper';
+import Swiper, { Navigation } from 'swiper';
+Swiper.use([Navigation]);
 
 const initSwiper = new Swiper('.swiper', {
   // Optional parameters
-  direction: 'vertical',
+  // direction: 'vertical',
   loop: true,
 
   // Navigation arrows
