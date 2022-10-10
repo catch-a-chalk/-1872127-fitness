@@ -1,7 +1,7 @@
 - const COACHES = [{ header: 'Анна Павлова', subheader: 'CrossFit', rank: 'Certified Level 3 Trainer', achievement: 'Победитель чемпионата России по CrossFit ', experience: 'Опыт — 6 лет'},{ header: 'Алексей Лавров', subheader: 'CrossFit', rank: 'Certified Level 3 Trainer', achievement: 'Победитель чемпионата России по CrossFit ', experience: 'Опыт — 6 лет'},{ header: 'Александр Пашков', subheader: 'CrossFit', rank: 'Certified Level 3 Trainer', achievement: 'Победитель чемпионата России по CrossFit ', experience: 'Опыт — 6 лет'},{ header: 'Мария Кетова', subheader: 'CrossFit', rank: 'Certified Level 3 Trainer', achievement: 'Победитель чемпионата России по CrossFit ', experience: 'Опыт — 6 лет'},]
 
 section.main-coaches
-  .main-coaches__wrapper.swiper
+  ._wrapper.swiper
     h1.section-heading Тренеры
     ul.main-coaches__list.swiper-wrapper
       each coach, index in COACHES
@@ -24,9 +24,9 @@ section.main-coaches
               li=coach.rank
               li=coach.achievement
               li=coach.experience
-    button.btn-left.swiper-button-prev(type="button" aria-expanded="false")
+    button.btn-left._prev(type="button")
       svg(width='16' height='32' aria-hidden='true' fill='none')
         use(href='img/sprite_auto.svg#icon-left')
-    button.btn-right.swiper-button-next(type="button" aria-expanded="false")
+    button.btn-right._next(type="button")
       svg(width='16' height='32' aria-hidden='true' fill='none')
         use(href='img/sprite_auto.svg#icon-right')

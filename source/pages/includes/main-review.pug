@@ -1,11 +1,11 @@
 - const REVIEWS = [{ header: 'Анна Орлова', text: '«Хожу в SuperClub уже больше года. Нравится, что в клубе всегда чисто, тренажеры обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей»'},]
 
 section.main-review
-  .main-review__wrapper.swiper
+  ._wrapper.swiper
     h1.section-heading Отзывы
-    ul.main-review__list.swiper-wrapper
+    ul._list.swiper-wrapper
       each review in REVIEWS
-        li.main-review__item.swiper-slide
+        li._item.swiper-slide
           -
             const reviewPath = 'img/review'
           // 1х: 80px; 2x: 160px
@@ -18,9 +18,9 @@ section.main-review
             img(src=`${reviewPath}-notmobile@1x.png` srcset=`${reviewPath}-notmobile@2x.png 2x` alt='Иконка пользователя' width=80 height=80)
           h2=review.header
           p=review.text
-    button.btn-left.swiper-button-prev(type="button" aria-expanded="false")
+    button.btn-left._prev(type="button" aria-expanded="false")
       svg(width='16' height='32' aria-hidden='true' fill='none')
         use(href='img/sprite_auto.svg#icon-left')
-    button.btn-right.swiper-button-next(type="button" aria-expanded="false")
+    button.btn-right._next(type="button" aria-expanded="false")
       svg(width='16' height='32' aria-hidden='true' fill='none')
         use(href='img/sprite_auto.svg#icon-right')
