@@ -1,5 +1,5 @@
 section.main-intro
-  .main-intro__wrapper
+  .main-intro__wrapper.container
     .main-intro__description
       h1.section-heading Тренажерный зал
       h2 Просторный зал площадью 900 кв/м
@@ -14,7 +14,7 @@ section.main-intro
       source(type='image/webp' media='(max-width: 1199px)' srcset=`${introPath}-tablet@1x.webp, ${introPath}-tablet@2x.webp 2x`)
       source(type='image/jpg' media='(max-width: 1199px)' srcset=`${introPath}-tablet@1x.jpg, ${introPath}-tablet@2x.jpg 2x`)
       source(type='image/webp' srcset=`${introPath}-desktop@1x.webp, ${introPath}-desktop@2x.webp 2x`)
-      img(src=`${introPath}-desktop@1x.jpg` srcset=`${introPath}-desktop@2x.jpg 2x` alt='Обзор тренажерного зала' width=660 height=401)
+      img.main-intro__image(src=`${introPath}-desktop@1x.jpg` srcset=`${introPath}-desktop@2x.jpg 2x` alt='Обзор тренажерного зала' width=660 height=401)
     .video
       a.video__link(href="https://youtu.be/9TZXsZItgdw" target="_blank" rel="noopener noreferrer")
         -

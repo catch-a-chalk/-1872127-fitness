@@ -1558,7 +1558,7 @@ button,
 
 .container {
   width: 100%;
-  max-width: 1920px;
+  max-width: 1366px;
   margin: 0 auto;
 }
 
@@ -1593,12 +1593,12 @@ button,
 
 .btn-left {
   right: 94%;
-  padding: 20px 20px 20px 47px;
+  padding: 20px 40px 20px 45px;
 }
 
 .btn-right {
   left: 94%;
-  padding: 20px 47px 20px 20px;
+  padding: 20px 65px 20px 20px;
 }
 
 .btn-white {
@@ -1739,10 +1739,7 @@ button,
   right: 34%;
   width: 364px;
   height: 228px;
-  background-color: #000000;
-  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 0, 0, 0.3)), to(rgba(255, 0, 0, 0.3)));
-  background-image: -o-linear-gradient(bottom, rgba(255, 0, 0, 0.3), rgba(255, 0, 0, 0.3));
-  background-image: linear-gradient(to top, rgba(255, 0, 0, 0.3), rgba(255, 0, 0, 0.3));
+  background-color: rgba(20, 54, 122, 0.5);
 }
 
 .video:hover .video__button,
@@ -1757,6 +1754,7 @@ button,
   width: 100%;
   height: 100%;
   border: none;
+  z-index: -1;
 }
 
 .video__button {
@@ -1947,7 +1945,6 @@ button,
 }
 
 .main-intro__wrapper {
-  max-width: 1450px;
   padding: 120px 103px 236px;
   display: -ms-grid;
   display: grid;
@@ -1986,6 +1983,11 @@ button,
   margin-bottom: 5px;
 }
 
+.main-intro__image {
+  position: relative;
+  z-index: -2;
+}
+
 .plans {
   display: -ms-grid;
   display: grid;
@@ -2003,7 +2005,7 @@ button,
   background-image: var(--background), linear-gradient(to top, var(--next-block-color) var(--next-block-size, 0), #f8f9fc var(--next-block-size, 0));
   background-size: 490px auto, 100%;
   background-repeat: no-repeat;
-  background-position: right -130px bottom, center bottom;
+  background-position: right -190px bottom, center bottom;
 }
 
 .plans__title {
@@ -2076,8 +2078,10 @@ button,
 }
 
 .main-competition__request {
+  max-width: 500px;
+  max-height: 500px;
   background-color: #ed0233;
-  padding: 85px 79px;
+  padding: calc(50vw - 598px) 79px;
   display: -ms-grid;
   display: grid;
   -webkit-column-gap: 48px;
@@ -2104,7 +2108,7 @@ button,
   font-weight: 400;
   line-height: 27px;
   letter-spacing: 0;
-  margin: 0 0 48px;
+  margin: 0 0 45px;
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-column: 1/3;
@@ -2114,6 +2118,9 @@ button,
 }
 
 .main-competition__request a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-column: 1/3;
@@ -2128,6 +2135,10 @@ button,
   align-items: center;
   text-align: center;
   text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 14px;
+  margin-bottom: 7px;
 }
 
 .main-competition__list {
@@ -2213,7 +2224,11 @@ button,
   background: transparent;
   cursor: pointer;
   position: absolute;
-  top: 47%;
+  top: 27.5%;
+  background-color: #ffffff;
+  height: 300px;
+  width: 40px;
+  z-index: 10;
 }
 
 .main-coaches__list {
@@ -2374,7 +2389,7 @@ button,
 }
 
 .main-advantages__wrapper {
-  padding: 60px 164px 120px;
+  padding: 60px 164px 77px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2716,7 +2731,8 @@ button,
 }
 
 .main-review__wrapper {
-  padding: 60px 103px 60px;
+  padding: 60px calc(50vw - 178px) 60px;
+  padding: 60px 402px 60px;
   position: relative;
   overflow: hidden;
   display: -webkit-box;
@@ -3280,6 +3296,7 @@ button,
   }
 
   .main-competition__request {
+    max-height: 292px;
     padding: 51px 45px;
     -webkit-column-gap: 32px;
     -moz-column-gap: 32px;
@@ -3325,7 +3342,7 @@ button,
   }
 
   .main-coaches__wrapper button {
-    top: 29%;
+    top: 24%;
   }
 
   .main-coaches__wrapper button:first-of-type {
@@ -3357,10 +3374,10 @@ button,
     -ms-grid-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
     margin: 18px 0 0;
-    -webkit-column-gap: 74px;
-    -moz-column-gap: 74px;
-    column-gap: 74px;
-    row-gap: 12px;
+    -webkit-column-gap: 56px;
+    -moz-column-gap: 56px;
+    column-gap: 56px;
+    row-gap: 14px;
   }
 
   .main-advantages__item:nth-of-type(10n + 2) {
@@ -3475,7 +3492,7 @@ button,
   }
 
   .main-feedback__data {
-    padding: 76px 134px 50px 130px;
+    padding: 76px 134px 45px 130px;
     -webkit-column-gap: 40px;
     -moz-column-gap: 40px;
     column-gap: 40px;
@@ -3519,6 +3536,10 @@ button,
   .section-heading {
     font-size: 32px;
     line-height: 32px;
+  }
+
+  .container {
+    max-width: 500px;
   }
 
   .btn-left {
@@ -3576,6 +3597,8 @@ button,
   .header__block {
     -ms-grid-rows: 85px 205px 56px;
     grid-template-rows: 85px 205px 56px;
+    -ms-grid-column-align: center;
+    justify-self: center;
   }
 
   .header__block p {
@@ -3646,13 +3669,17 @@ button,
 
   .plans__list {
     width: 25%;
-    margin-bottom: 58px;
+    margin-bottom: 68px;
   }
 
   .main-competition__wrapper {
     padding: 70px 15px 35px;
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
+  }
+
+  .main-competition__request {
+    max-width: 660px;
   }
 
   .main-coaches__wrapper {

@@ -1,5 +1,9 @@
 .container {
   width: 100%;
-  max-width: 1920px;
+  max-width: 1366px;
   margin: 0 auto;
+
+  @media (max-width: ($vp-768 - 1)) {
+    max-width: 500px;
+  }
 }

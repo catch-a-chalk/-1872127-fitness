@@ -3,7 +3,6 @@
 }
 
 .main-intro__wrapper {
-  max-width: 1450px;
   padding: 120px 103px 236px;
   display: grid;
   grid-template-columns: 355px auto;
@@ -95,4 +94,9 @@
       padding: 0 45px 0 15px;
     }
   }
+}
+
+.main-intro__image {
+  position: relative;
+  z-index: -2;
 }

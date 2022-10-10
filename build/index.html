@@ -58,7 +58,7 @@
     </header>
     <main>
       <section class="main-intro">
-        <div class="main-intro__wrapper">
+        <div class="main-intro__wrapper container">
           <div class="main-intro__description">
             <h1 class="section-heading">Тренажерный зал</h1>
             <h2>Просторный зал площадью 900 кв/м</h2>
@@ -71,7 +71,7 @@
             <source type="image/jpg" media="(max-width: 767px)" srcset="img/gym-mobile@1x.jpg, img/gym-mobile@2x.jpg 2x">
             <source type="image/webp" media="(max-width: 1199px)" srcset="img/gym-tablet@1x.webp, img/gym-tablet@2x.webp 2x">
             <source type="image/jpg" media="(max-width: 1199px)" srcset="img/gym-tablet@1x.jpg, img/gym-tablet@2x.jpg 2x">
-            <source type="image/webp" srcset="img/gym-desktop@1x.webp, img/gym-desktop@2x.webp 2x"><img src="img/gym-desktop@1x.jpg" srcset="img/gym-desktop@2x.jpg 2x" alt="Обзор тренажерного зала" width="660" height="401">
+            <source type="image/webp" srcset="img/gym-desktop@1x.webp, img/gym-desktop@2x.webp 2x"><img class="main-intro__image" src="img/gym-desktop@1x.jpg" srcset="img/gym-desktop@2x.jpg 2x" alt="Обзор тренажерного зала" width="660" height="401">
           </picture>
           <div class="video"><a class="video__link" href="https://youtu.be/9TZXsZItgdw" target="_blank" rel="noopener noreferrer">
               <!-- 1х: 364px; 2x: 728px-->
@@ -90,7 +90,7 @@
 --bg2: url(&quot;../img/plates-desktop@2x.png&quot;);
 --tab: url(&quot;../img/plates-tablet@1x.png&quot;);
 --tab2: url(&quot;../img/plates-tablet@2x.png&quot;);
---next-block-size: 71px;
+--next-block-size: 0;
 --next-block-color: white;
 ">
         <h2 class="section-heading plans__title">Абонементы</h2>
@@ -217,7 +217,7 @@
         </div>
       </section>
       <section class="main-coaches">
-        <div class="main-coaches__wrapper swiper">
+        <div class="main-coaches__wrapper container swiper">
           <h1 class="section-heading">Тренеры</h1>
           <ul class="main-coaches__list swiper-wrapper">
             <li class="main-coaches__item swiper-slide">
@@ -296,6 +296,82 @@
                 </ul>
               </div>
             </li>
+            <li class="main-coaches__item swiper-slide">
+              <!-- 1х: 260px; 2x: 520px-->
+              <picture>
+                <source type="image/webp" media="(max-width: 767px)" srcset="img/coach-5-mobile@1x.webp, img/coach-5-mobile@2x.webp 2x">
+                <source type="image/jpg" media="(max-width: 767px)" srcset="img/coach-5-mobile@1x.jpg, img/coach-5-mobile@2x.jpg 2x">
+                <source type="image/webp" media="(max-width: 1199px)" srcset="img/coach-5-tablet@1x.webp, img/coach-5-tablet@2x.webp 2x">
+                <source type="image/jpg" media="(max-width: 1199px)" srcset="img/coach-5-tablet@1x.jpg, img/coach-5-tablet@2x.jpg 2x">
+                <source type="image/webp" srcset="img/coach-5-desktop@1x.webp, img/coach-5-desktop@2x.webp 2x"><img src="img/coach-5-desktop@1x.jpg" srcset="img/coach-5-desktop@2x.jpg 2x" alt="Тренер Анна Павлова" width="260" height="294">
+              </picture>
+              <h2>Анна Павлова</h2>
+              <div class="main-coaches__info">
+                <p>CrossFit</p>
+                <ul>
+                  <li>Certified Level 3 Trainer</li>
+                  <li>Победитель чемпионата России по CrossFit </li>
+                  <li>Опыт — 6 лет</li>
+                </ul>
+              </div>
+            </li>
+            <li class="main-coaches__item swiper-slide">
+              <!-- 1х: 260px; 2x: 520px-->
+              <picture>
+                <source type="image/webp" media="(max-width: 767px)" srcset="img/coach-6-mobile@1x.webp, img/coach-6-mobile@2x.webp 2x">
+                <source type="image/jpg" media="(max-width: 767px)" srcset="img/coach-6-mobile@1x.jpg, img/coach-6-mobile@2x.jpg 2x">
+                <source type="image/webp" media="(max-width: 1199px)" srcset="img/coach-6-tablet@1x.webp, img/coach-6-tablet@2x.webp 2x">
+                <source type="image/jpg" media="(max-width: 1199px)" srcset="img/coach-6-tablet@1x.jpg, img/coach-6-tablet@2x.jpg 2x">
+                <source type="image/webp" srcset="img/coach-6-desktop@1x.webp, img/coach-6-desktop@2x.webp 2x"><img src="img/coach-6-desktop@1x.jpg" srcset="img/coach-6-desktop@2x.jpg 2x" alt="Тренер Алексей Лавров" width="260" height="294">
+              </picture>
+              <h2>Алексей Лавров</h2>
+              <div class="main-coaches__info">
+                <p>CrossFit</p>
+                <ul>
+                  <li>Certified Level 3 Trainer</li>
+                  <li>Победитель чемпионата России по CrossFit </li>
+                  <li>Опыт — 6 лет</li>
+                </ul>
+              </div>
+            </li>
+            <li class="main-coaches__item swiper-slide">
+              <!-- 1х: 260px; 2x: 520px-->
+              <picture>
+                <source type="image/webp" media="(max-width: 767px)" srcset="img/coach-7-mobile@1x.webp, img/coach-7-mobile@2x.webp 2x">
+                <source type="image/jpg" media="(max-width: 767px)" srcset="img/coach-7-mobile@1x.jpg, img/coach-7-mobile@2x.jpg 2x">
+                <source type="image/webp" media="(max-width: 1199px)" srcset="img/coach-7-tablet@1x.webp, img/coach-7-tablet@2x.webp 2x">
+                <source type="image/jpg" media="(max-width: 1199px)" srcset="img/coach-7-tablet@1x.jpg, img/coach-7-tablet@2x.jpg 2x">
+                <source type="image/webp" srcset="img/coach-7-desktop@1x.webp, img/coach-7-desktop@2x.webp 2x"><img src="img/coach-7-desktop@1x.jpg" srcset="img/coach-7-desktop@2x.jpg 2x" alt="Тренер Александр Пашков" width="260" height="294">
+              </picture>
+              <h2>Александр Пашков</h2>
+              <div class="main-coaches__info">
+                <p>CrossFit</p>
+                <ul>
+                  <li>Certified Level 3 Trainer</li>
+                  <li>Победитель чемпионата России по CrossFit </li>
+                  <li>Опыт — 6 лет</li>
+                </ul>
+              </div>
+            </li>
+            <li class="main-coaches__item swiper-slide">
+              <!-- 1х: 260px; 2x: 520px-->
+              <picture>
+                <source type="image/webp" media="(max-width: 767px)" srcset="img/coach-8-mobile@1x.webp, img/coach-8-mobile@2x.webp 2x">
+                <source type="image/jpg" media="(max-width: 767px)" srcset="img/coach-8-mobile@1x.jpg, img/coach-8-mobile@2x.jpg 2x">
+                <source type="image/webp" media="(max-width: 1199px)" srcset="img/coach-8-tablet@1x.webp, img/coach-8-tablet@2x.webp 2x">
+                <source type="image/jpg" media="(max-width: 1199px)" srcset="img/coach-8-tablet@1x.jpg, img/coach-8-tablet@2x.jpg 2x">
+                <source type="image/webp" srcset="img/coach-8-desktop@1x.webp, img/coach-8-desktop@2x.webp 2x"><img src="img/coach-8-desktop@1x.jpg" srcset="img/coach-8-desktop@2x.jpg 2x" alt="Тренер Мария Кетова" width="260" height="294">
+              </picture>
+              <h2>Мария Кетова</h2>
+              <div class="main-coaches__info">
+                <p>CrossFit</p>
+                <ul>
+                  <li>Certified Level 3 Trainer</li>
+                  <li>Победитель чемпионата России по CrossFit </li>
+                  <li>Опыт — 6 лет</li>
+                </ul>
+              </div>
+            </li>
           </ul>
           <button class="btn-left main-coaches__prev" type="button">
             <svg width="16" height="32" aria-hidden="true" fill="none">
@@ -310,7 +386,7 @@
         </div>
       </section>
       <section class="main-advantages">
-        <div class="main-advantages__wrapper">
+        <div class="main-advantages__wrapper container">
           <h1 class="section-heading">Наши преимущества</h1>
           <ul class="main-advantages__list">
             <li class="main-advantages__item">
@@ -347,7 +423,7 @@
         </div>
       </section>
       <section class="main-promo">
-        <div class="main-promo__wrapper">
+        <div class="main-promo__wrapper container">
           <h1 class="section-heading">Акции</h1>
           <div class="main-promo__suggestions">
             <div class="main-promo__container">
@@ -385,19 +461,31 @@
         </div>
       </section>
       <section class="main-review">
-        <div class="main-review__wrapper swiper">
+        <div class="main-review__wrapper container swiper">
           <h1 class="section-heading">Отзывы</h1>
           <ul class="main-review__list swiper-wrapper">
             <li class="main-review__item swiper-slide">
               <!-- 1х: 80px; 2x: 160px-->
               <picture>
-                <source type="image/webp" media="(max-width: 767px)" srcset="img/review-mobile@1x.webp, img/review-mobile@2x.webp 2x">
-                <source type="image/png" media="(max-width: 767px)" srcset="img/review-mobile@1x.png, img/review-mobile@2x.png 2x">
-                <source type="image/webp" media="(max-width: 1199px)" srcset="img/review-notmobile@1x.webp, img/review-notmobile@2x.webp 2x">
-                <source type="image/png" media="(max-width: 1199px)" srcset="img/review-notmobile@1x.png, img/review-notmobile@2x.png 2x">
-                <source type="image/webp" srcset="img/review-notmobile@1x.webp, img/review-notmobile@2x.webp 2x"><img src="img/review-notmobile@1x.png" srcset="img/review-notmobile@2x.png 2x" alt="Иконка пользователя" width="80" height="80">
+                <source type="image/webp" media="(max-width: 767px)" srcset="img/review-1-mobile@1x.webp, img/review-1-mobile@2x.webp 2x">
+                <source type="image/png" media="(max-width: 767px)" srcset="img/review-1-mobile@1x.png, img/review-1-mobile@2x.png 2x">
+                <source type="image/webp" media="(max-width: 1199px)" srcset="img/review-1-notmobile@1x.webp, img/review-1-notmobile@2x.webp 2x">
+                <source type="image/png" media="(max-width: 1199px)" srcset="img/review-1-notmobile@1x.png, img/review-1-notmobile@2x.png 2x">
+                <source type="image/webp" srcset="img/review-1-notmobile@1x.webp, img/review-1-notmobile@2x.webp 2x"><img src="img/review-1-notmobile@1x.png" srcset="img/review-1-notmobile@2x.png 2x" alt="Иконка пользователя" width="80" height="80">
               </picture>
               <h2>Анна Орлова</h2>
+              <p>«Хожу в SuperClub уже больше года. Нравится, что в клубе всегда чисто, тренажеры обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей»</p>
+            </li>
+            <li class="main-review__item swiper-slide">
+              <!-- 1х: 80px; 2x: 160px-->
+              <picture>
+                <source type="image/webp" media="(max-width: 767px)" srcset="img/review-2-mobile@1x.webp, img/review-2-mobile@2x.webp 2x">
+                <source type="image/png" media="(max-width: 767px)" srcset="img/review-2-mobile@1x.png, img/review-2-mobile@2x.png 2x">
+                <source type="image/webp" media="(max-width: 1199px)" srcset="img/review-2-notmobile@1x.webp, img/review-2-notmobile@2x.webp 2x">
+                <source type="image/png" media="(max-width: 1199px)" srcset="img/review-2-notmobile@1x.png, img/review-2-notmobile@2x.png 2x">
+                <source type="image/webp" srcset="img/review-2-notmobile@1x.webp, img/review-2-notmobile@2x.webp 2x"><img src="img/review-2-notmobile@1x.png" srcset="img/review-2-notmobile@2x.png 2x" alt="Иконка пользователя" width="80" height="80">
+              </picture>
+              <h2>Алина Ян</h2>
               <p>«Хожу в SuperClub уже больше года. Нравится, что в клубе всегда чисто, тренажеры обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей»</p>
             </li>
           </ul>
@@ -454,7 +542,7 @@
       </section>
     </main>
     <footer class="footer">
-      <div class="footer__wrapper">
+      <div class="footer__wrapper container">
         <h1>Supergym</h1>
         <ul class="footer__list">
           <li class="footer__item"><a href="#"><span>Услуги</span></a></li>

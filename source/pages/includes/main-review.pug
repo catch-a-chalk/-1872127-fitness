@@ -1,13 +1,14 @@
-- const REVIEWS = [{ header: 'Анна Орлова', text: '«Хожу в SuperClub уже больше года. Нравится, что в клубе всегда чисто, тренажеры обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей»'},]
+- const REVIEWS = [{ header: 'Анна Орлова', text: '«Хожу в SuperClub уже больше года. Нравится, что в клубе всегда чисто, тренажеры обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей»'},{ header: 'Алина Ян', text: '«Хожу в SuperClub уже больше года. Нравится, что в клубе всегда чисто, тренажеры обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей»'}]
 
 section.main-review
-  ._wrapper.swiper
+  ._wrapper.container.swiper
     h1.section-heading Отзывы
     ul._list.swiper-wrapper
-      each review in REVIEWS
+      each review, value in REVIEWS
         li._item.swiper-slide
           -
-            const reviewPath = 'img/review'
+            const currentReview = value + 1
+            const reviewPath = 'img/review-' + currentReview;
           // 1х: 80px; 2x: 160px
           picture
             source(type='image/webp' media='(max-width: 767px)' srcset=`${reviewPath}-mobile@1x.webp, ${reviewPath}-mobile@2x.webp 2x`)

@@ -3,7 +3,7 @@ import Swiper, { Navigation, A11y } from "swiper";
 function initSwiper() {
   new Swiper(".main-review__wrapper", {
     direction: "horizontal",
-    spaceBetween: 300,
+    spaceBetween: 405,
     grabCursor: true,
     loop: true,
     modules: [Navigation, A11y],
@@ -19,7 +19,12 @@ function initSwiper() {
     grabCursor: true,
     modules: [Navigation, A11y],
     breakpoints: {
-      700: {
+      319: {
+        slidesPerView: 1,
+        spaceBetween: 15,
+      },
+
+      768: {
         slidesPerView: 2,
         spaceBetween: 30,
       },

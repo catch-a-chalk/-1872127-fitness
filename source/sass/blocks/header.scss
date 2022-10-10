@@ -108,6 +108,7 @@
 
   @media (max-width: ($vp-768 - 1)) {
     grid-template-rows: 85px 205px 56px;
+    justify-self: center;
   }
 
   p {

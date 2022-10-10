@@ -23,16 +23,15 @@
     background: transparent;
     cursor: pointer;
     position: absolute;
-    top: 47%;
+    top: 27.5%;
 
-    // background-color: $color-default-white;
-    // height: 282px;
-    // width: 30px;
-    // top: 40px;
-    // z-index: 10;
+    background-color: $color-default-white;
+    height: 300px;
+    width: 40px;
+    z-index: 10;
 
     @media (max-width: ($vp-1200 - 1)) {
-      top: 29%;
+      top: 24%;
 
       &:first-of-type {
         left: 0%;

@@ -3,7 +3,7 @@
 }
 
 .main-advantages__wrapper {
-  padding: 60px 164px 120px;
+  padding: 60px 164px 77px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -43,8 +43,8 @@
   @media (max-width: ($vp-1200 - 1)) {
     grid-template-columns: 1fr 1fr;
     margin: 18px 0 0;
-    column-gap: 74px;
-    row-gap: 12px;
+    column-gap: 56px;
+    row-gap: 14px;
   }
 
   @media (max-width: ($vp-768 - 1)) {
@@ -55,10 +55,6 @@
 
 .main-advantages__item {
   display: grid;
-
-  // @media (max-width: ($vp-768 - 1)) {
-  //   display: block;
-  // }
 
   &:not(:nth-of-type(10n + 3)) {
     grid-template-columns: 1fr 4fr;

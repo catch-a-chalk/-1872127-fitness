@@ -12,7 +12,7 @@
       linear-gradient(to top, var(--next-block-color) var(--next-block-size, 0), #f8f9fc var(--next-block-size, 0));
     size: 490px auto, 100%;
     repeat: no-repeat;
-    position: right -130px bottom, center bottom;
+    position: right -190px bottom, center bottom;
   }
 
   @media (min-resolution: 2dppx) {
@@ -28,7 +28,6 @@
   line-height: 1;
   margin-block: 116px (53px - 31px);
 
-  
   @media (max-width: ($vp-1200 - 1)) {
     margin-block: 99px (53px - 38px);
   }
@@ -92,7 +91,7 @@
 
   @media (max-width: ($vp-768 - 1)) {
     width: 25%;
-    margin-bottom: 58px;
+    margin-bottom: 68px;
   }
 
   &[hidden] {
