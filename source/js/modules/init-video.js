@@ -4,6 +4,7 @@ export function initVideo() {
 	const video = wrapper.querySelector(".video__link");
 	const youtubeID = video.href.slice(17);
 
+	video.removeAttribute("href")
 	button.hidden = false;
 
 	wrapper.addEventListener("click", () => {

@@ -25,6 +25,12 @@
     position: absolute;
     top: 47%;
 
+    // background-color: $color-default-white;
+    // height: 282px;
+    // width: 30px;
+    // top: 40px;
+    // z-index: 10;
+
     @media (max-width: ($vp-1200 - 1)) {
       top: 29%;
 
@@ -69,8 +75,9 @@
 
 .main-coaches__item {
   aspect-ratio: 260 / 294;
-  max-height: 294px;
-  padding: 57px 45px 57px;
+  width: 260px;
+  height: auto;
+  padding: 57px 45px 51px;
   position: relative;
   overflow: hidden;
   transition-property: background-color;
@@ -83,11 +90,12 @@
 
   @media (max-width: ($vp-1200 - 1)) {
     aspect-ratio: 268 / 294;
+    width: 268px;
   }
 
   @media (max-width: ($vp-768 - 1)) {
     aspect-ratio: 226 / 274;
-    max-height: 274px;
+    width: 226px;
     padding: 48px 25px 48px 25px;
   }
 
