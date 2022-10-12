@@ -17,6 +17,7 @@ function initSwiper() {
     direction: "horizontal",
     spaceBetween: 300,
     grabCursor: true,
+    loop: true,
     modules: [Navigation, A11y],
     breakpoints: {
       319: {

@@ -1,5 +1,6 @@
 .main-review__wrapper {
-  padding: 60px calc(50vw - 178px) 60px;
+  width: 682px;
+  padding: 60px;
   position: relative;
   overflow: hidden;
   display: flex;
@@ -7,10 +8,12 @@
   align-items: center;
 
   @media (max-width: ($vp-1200 - 1)) {
+    width: 773px;
     padding: 53px 103px 60px;
   }
 
   @media (max-width: ($vp-768 - 1)) {
+    width: 254px;
     padding: 40px 15px 25px;
   }
 
@@ -35,7 +38,7 @@
     }
 
     &:first-of-type {
-      left: 22%;
+      left: -6%;
 
       @media (max-width: ($vp-1200 - 1)) {
         left: 0;
@@ -43,7 +46,7 @@
     }
 
     &:last-of-type {
-      left: 72%;
+      left: 94%;
 
       @media (max-width: ($vp-1200 - 1)) {
         left: 90%;

@@ -3,13 +3,13 @@
 }
 
 .main-advantages__wrapper {
-  padding: 60px 164px 77px;
+  padding: 60px 164px 116px;
   display: flex;
   flex-direction: column;
   align-items: center;
 
   @media (max-width: ($vp-1200 - 1)) {
-    padding: 60px 45px 100px;
+    padding: 60px 45px 76px;
   }
 
   @media (max-width: ($vp-768 - 1)) {
@@ -74,6 +74,12 @@
       background-image: linear-gradient(to right, #d10a42 0.85%, #00359f 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+
+      @media (max-width: ($vp-1200 - 1)) {
+        font-size: 58px;
+        font-weight: 700;
+        line-height: 53px;
+      }
     }
 
     small {

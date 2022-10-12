@@ -1584,6 +1584,7 @@ button,
   line-height: 14px;
   letter-spacing: 0.05em;
   text-transform: uppercase;
+  z-index: 2;
 }
 
 .btn:disabled {
@@ -2079,9 +2080,8 @@ button,
 
 .main-competition__request {
   max-width: 500px;
-  max-height: 500px;
   background-color: #ed0233;
-  padding: calc(50vw - 598px) 79px;
+  padding: 87px 79px;
   display: -ms-grid;
   display: grid;
   -webkit-column-gap: 48px;
@@ -2206,6 +2206,12 @@ button,
   grid-row: 2/3;
 }
 
+.main-competition__img {
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
 .main-coaches {
   color: #f8f9fc;
 }
@@ -2244,10 +2250,9 @@ button,
 }
 
 .main-coaches__item {
-  aspect-ratio: 260/294;
   width: 260px;
-  height: auto;
-  padding: 57px 45px 51px;
+  height: 294px;
+  padding: 57px 34px 51px;
   position: relative;
   overflow: hidden;
   -webkit-transition-property: background-color;
@@ -2389,7 +2394,7 @@ button,
 }
 
 .main-advantages__wrapper {
-  padding: 60px 164px 77px;
+  padding: 60px 164px 116px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2572,7 +2577,7 @@ button,
 }
 
 .main-promo__wrapper {
-  padding: 113px 103px 60px;
+  padding: 117px 103px 60px;
 }
 
 .main-promo__wrapper h1 {
@@ -2731,8 +2736,8 @@ button,
 }
 
 .main-review__wrapper {
-  padding: 60px calc(50vw - 178px) 60px;
-  padding: 60px 402px 60px;
+  width: 682px;
+  padding: 60px;
   position: relative;
   overflow: hidden;
   display: -webkit-box;
@@ -2761,11 +2766,11 @@ button,
 }
 
 .main-review__wrapper button:first-of-type {
-  left: 22%;
+  left: -6%;
 }
 
 .main-review__wrapper button:last-of-type {
-  left: 72%;
+  left: 94%;
 }
 
 .main-review__list {
@@ -3358,12 +3363,11 @@ button,
   }
 
   .main-coaches__item {
-    aspect-ratio: 268/294;
     width: 268px;
   }
 
   .main-advantages__wrapper {
-    padding: 60px 45px 100px;
+    padding: 60px 45px 76px;
   }
 
   .main-advantages__wrapper h1 {
@@ -3378,6 +3382,12 @@ button,
     -moz-column-gap: 56px;
     column-gap: 56px;
     row-gap: 14px;
+  }
+
+  .main-advantages__item:not(:nth-of-type(10n + 3)) h2 {
+    font-size: 58px;
+    font-weight: 700;
+    line-height: 53px;
   }
 
   .main-advantages__item:nth-of-type(10n + 2) {
@@ -3451,6 +3461,7 @@ button,
   }
 
   .main-review__wrapper {
+    width: 773px;
     padding: 53px 103px 60px;
   }
 
@@ -3705,8 +3716,8 @@ button,
   }
 
   .main-coaches__item {
-    aspect-ratio: 226/274;
     width: 226px;
+    height: 274px;
     padding: 48px 25px 48px 25px;
   }
 
@@ -3833,6 +3844,7 @@ button,
   }
 
   .main-review__wrapper {
+    width: 254px;
     padding: 40px 15px 25px;
   }
 

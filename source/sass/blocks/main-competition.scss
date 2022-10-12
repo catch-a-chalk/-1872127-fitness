@@ -20,9 +20,8 @@
 
 .main-competition__request {
   max-width: 500px;
-  max-height: 500px;
   background-color: $color-torch-red;
-  padding: calc(50vw - 598px) 79px;
+  padding: 87px 79px;
   display: grid;
   column-gap: 48px;
 
@@ -150,4 +149,9 @@
       line-height: 15px;
     }
   }
+}
+
+.main-competition__img {
+  height: 100%;
+  object-fit: cover;
 }
