@@ -10,6 +10,7 @@
 
   @media (max-width: ($vp-1200 - 1)) {
     padding: 30px 45px 50px;
+    grid-template-columns: 1fr 1fr;
   }
 
   @media (max-width: ($vp-768 - 1)) {
@@ -26,7 +27,9 @@
   column-gap: 48px;
 
   @media (max-width: ($vp-1200 - 1)) {
-    max-height: 292px;
+    max-width: 554px;
+    max-height: 554px;
+    aspect-ratio: 292 / 292;
     padding: 51px 45px;
     column-gap: 32px;
   }

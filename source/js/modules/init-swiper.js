@@ -15,16 +15,12 @@ function initSwiper() {
 
   new Swiper(".main-coaches__wrapper", {
     direction: "horizontal",
+    updateOnWindowResize: true,
     spaceBetween: 300,
     grabCursor: true,
     loop: true,
     modules: [Navigation, A11y],
     breakpoints: {
-      319: {
-        slidesPerView: 1,
-        spaceBetween: 15,
-      },
-
       768: {
         slidesPerView: 2,
         spaceBetween: 30,

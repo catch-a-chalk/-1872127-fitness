@@ -13,8 +13,8 @@
   }
 
   @media (max-width: ($vp-768 - 1)) {
-    width: 254px;
-    padding: 40px 15px 25px;
+    width: 320px;
+    padding: 40px 50px 25px;
   }
 
   h1 {
@@ -50,6 +50,11 @@
 
       @media (max-width: ($vp-1200 - 1)) {
         left: 90%;
+      }
+
+      @media (max-width: ($vp-768 - 1)) {
+        left: 77%;
+        padding: 20px 100px 20px 45px;
       }
     }
   }

@@ -1,5 +1,8 @@
 .main-coaches {
   color: $color-ghost-white;
+  @media (max-width: ($vp-768 - 1)) {
+    display: none;
+  }
 }
 
 .main-coaches__wrapper {
@@ -8,10 +11,6 @@
 
   @media (max-width: ($vp-1200 - 1)) {
     padding: 50px 101px 100px;
-  }
-
-  @media (max-width: ($vp-768 - 1)) {
-    padding: 35px 15px 71px;
   }
 
   h1 {
@@ -41,18 +40,6 @@
         left: 90%;
       }
     }
-
-    @media (max-width: ($vp-768 - 1)) {
-      top: 46%;
-
-      &:first-of-type {
-        left: 0%;
-      }
-
-      &:last-of-type {
-        left: 84%;
-      }
-    }
   }
 }
 
@@ -65,10 +52,6 @@
 
   @media (max-width: ($vp-1200 - 1)) {
     margin: 42px 0 0;
-  }
-
-  @media (max-width: ($vp-768 - 1)) {
-    justify-content: center;
   }
 }
 
@@ -88,12 +71,6 @@
 
   @media (max-width: ($vp-1200 - 1)) {
     width: 268px;
-  }
-
-  @media (max-width: ($vp-768 - 1)) {
-    width: 226px;
-    height: 274px;
-    padding: 48px 25px 48px 25px;
   }
 
   img {

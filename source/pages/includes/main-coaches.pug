@@ -11,8 +11,6 @@ section.main-coaches
             const coachPath = 'img/coach-' + currentIndex
           // 1х: 260px; 2x: 520px
           picture
-            source(type='image/webp' media='(max-width: 767px)' srcset=`${coachPath}-mobile@1x.webp, ${coachPath}-mobile@2x.webp 2x`)
-            source(type='image/jpg' media='(max-width: 767px)' srcset=`${coachPath}-mobile@1x.jpg, ${coachPath}-mobile@2x.jpg 2x`)
             source(type='image/webp' media='(max-width: 1199px)' srcset=`${coachPath}-tablet@1x.webp, ${coachPath}-tablet@2x.webp 2x`)
             source(type='image/jpg' media='(max-width: 1199px)' srcset=`${coachPath}-tablet@1x.jpg, ${coachPath}-tablet@2x.jpg 2x`)
             source(type='image/webp' srcset=`${coachPath}-desktop@1x.webp, ${coachPath}-desktop@2x.webp 2x`)
