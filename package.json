@@ -61,6 +61,7 @@
     "node": ">=16.15.1"
   },
   "dependencies": {
+    "gh-pages": "^4.0.0",
     "swiper": "^8.4.2"
   }
 }
