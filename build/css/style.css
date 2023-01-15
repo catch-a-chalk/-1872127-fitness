@@ -1816,6 +1816,7 @@ button,
 
 .header__contact span {
   letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 .header__intro {
@@ -1920,6 +1921,7 @@ button,
 }
 
 .header__links {
+  display: none;
   list-style-type: none;
   letter-spacing: -1px;
   padding: 0;
