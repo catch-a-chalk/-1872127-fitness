@@ -1816,6 +1816,7 @@ button,
 
 .header__contact span {
   letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 .header__intro {
@@ -1920,6 +1921,7 @@ button,
 }
 
 .header__links {
+  display: none;
   list-style-type: none;
   letter-spacing: -1px;
   padding: 0;
@@ -3689,6 +3691,7 @@ button,
 
   .main-competition__request {
     max-width: 660px;
+    padding: 51px 22px;
   }
 
   .main-coaches {
